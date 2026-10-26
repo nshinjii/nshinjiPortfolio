@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>nshinji — Roblox Creator</title>
-<meta name="description" content="nshinji — Roblox and Blox Fruits videos: funny moments, challenges, updates and Shorts.">
+<title>nshinji — Creator &amp; Web Designer</title>
+<meta name="description" content="nshinji — content creator and web designer. Roblox and Blox Fruits videos, and websites for creators.">
 <meta name="theme-color" content="#0a0a0b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,6 +128,24 @@
   .about p { color: var(--muted); font-size: 18px; margin-bottom: 16px; max-width: 560px; }
   .about p strong { color: var(--text); font-weight: 500; }
 
+  /* Websites */
+  .sites { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .site { display: flex; flex-direction: column; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: border-color .3s, transform .3s; }
+  .site:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .site-bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--bg); }
+  .site-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+  .site-bar span { margin-left: 10px; font-size: 13px; color: var(--muted); background: var(--bg-2); padding: 3px 12px; border-radius: 999px; }
+  .site-body { padding: 32px; display: flex; flex-direction: column; gap: 12px; flex: 1;
+    background: radial-gradient(70% 80% at 100% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 70%); }
+  .site-body.empty { background: none; }
+  .site-body .tag { align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 4px 10px; border-radius: 999px; }
+  .site-body .tag.ghost { background: transparent; color: var(--muted); border: 1px dashed var(--muted); }
+  .site-body h3 { font-family: Anton, sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(36px, 4.5vw, 56px); line-height: 1; margin-top: 28px; }
+  .site-body p { color: var(--muted); max-width: 420px; }
+  .site-body .visit { margin-top: auto; padding-top: 16px; font-weight: 600; font-size: 14px; }
+  .site:hover .visit { color: var(--accent); }
+  @media (max-width: 900px) { .sites { grid-template-columns: 1fr; } }
+
   /* Contact */
   .contact { border-top: 1px solid var(--line); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
@@ -179,6 +197,7 @@
     <a href="#socials">Socials</a>
     <a href="#videos">Videos</a>
     <a href="#about">About</a>
+    <a href="#websites">Websites</a>
   </div>
   <a href="#contact" class="btn">Contact</a>
 </nav>
@@ -280,8 +299,42 @@
     <div class="reveal">
       <div class="eyebrow">About</div>
       <h2 class="display">Hey, I'm<br>nshinji.</h2>
-      <p>I make <strong>Roblox and Blox Fruits videos</strong>: funny moments, challenges, updates and Shorts.</p>
-      <p>I'm always working to make every video better than the last, with new uploads coming regularly. Subscribe so you don't miss the next one.</p>
+      <p>I'm a <strong>content creator and web designer</strong>. On YouTube I make Roblox and Blox Fruits videos: funny moments, challenges, updates and Shorts.</p>
+      <p>I also <strong>build websites for creators</strong>: fast, good-looking sites that put their videos, socials and community in one place. Check out my work below, or see more at <a class="mail" href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a>.</p>
+      <div class="cta-row" style="margin-top:28px">
+        <a href="#websites" class="btn">See websites →</a>
+        <a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener" class="btn ghost">nshinjimedia.co.uk ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="websites" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Web design · Clients</div><h2 class="display">Websites<br>I've built</h2></div>
+      <a href="#contact" class="btn ghost">Want one? →</a>
+    </div>
+    <!-- To add a client: copy one <a class="site"> block and change the link, name and description -->
+    <div class="sites">
+      <a class="site reveal" href="https://sg0hann.online" target="_blank" rel="noopener">
+        <div class="site-bar"><i></i><i></i><i></i><span>sg0hann.online</span></div>
+        <div class="site-body">
+          <span class="tag">Client</span>
+          <h3>SG0HANN</h3>
+          <p>Official website for an OG Fortnite creator: videos, maps and community in one hub, with a light mode option.</p>
+          <span class="visit">Visit site ↗</span>
+        </div>
+      </a>
+      <a class="site reveal" href="#contact">
+        <div class="site-bar"><i></i><i></i><i></i><span>your-site.com</span></div>
+        <div class="site-body empty">
+          <span class="tag ghost">Open slot</span>
+          <h3>Your site here</h3>
+          <p>Creator, brand or community that needs a website? Let's build it.</p>
+          <span class="visit">Get in touch →</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -291,7 +344,7 @@
     <div class="contact-copy reveal">
       <div class="eyebrow">Business &amp; collabs</div>
       <h2 class="display">Let's <span>talk</span>.</h2>
-      <p>Collab ideas, sponsorships or business questions: send a message and it lands straight in my inbox. You can also email <a class="mail" href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a>.</p>
+      <p>Need a website, or have a collab, sponsorship or business question? send a message and it lands straight in my inbox. You can also email <a class="mail" href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a>.</p>
       <div class="socials">
         <a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener" class="btn ghost">YouTube</a>
         <a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener" class="btn ghost">TikTok</a>
@@ -310,6 +363,7 @@
       <div class="field">
         <label for="f-topic">What's it about?</label>
         <select id="f-topic" name="topic">
+          <option>Website</option>
           <option>Collab</option>
           <option>Sponsorship</option>
           <option>Business</option>
@@ -325,7 +379,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© <span id="year"></span> nshinji</span>
+    <span>© <span id="year"></span> nshinji · <a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></span>
     <a href="#">Back to top ↑</a>
   </div>
 </footer>
