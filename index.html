@@ -161,6 +161,7 @@
   .plat-count { margin-top: auto; }
   .plat-count b { display: block; font-weight: 800; font-size: clamp(50px, 5vw, 72px); letter-spacing: -0.05em; line-height: .95; font-variation-settings: "opsz" 96; font-variant-numeric: tabular-nums; }
   .plat-count span { font-weight: 600; font-size: 16px; opacity: .8; }
+  .plat-extra { margin-top: 10px; display: inline-block; font-size: 14px; font-weight: 700; padding: 4px 11px; border-radius: 999px; background: rgb(0 0 0 / .14); }
   .plat-cta { align-self: flex-start; font-weight: 700; font-size: 15px; padding: 10px 18px; border-radius: 999px; background: #0A0A0B; color: #fff; }
   .plat.tt .plat-cta { background: #0A0A0B; }
   .plat .total { font-size: 16px; color: var(--soft); padding-top: 14px; border-top: 1px solid var(--line); }
@@ -358,7 +359,7 @@
           <span class="plat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></span>
           <div><div class="plat-name">YouTube</div><div class="plat-handle">@nshinjiiii</div></div>
         </div>
-        <div class="plat-count"><b data-stat="youtube">–</b><span>subscribers</span></div>
+        <div class="plat-count"><b data-stat="youtube">–</b><span>subscribers</span><div class="plat-extra" data-extra="youtube"></div></div>
         <span class="plat-cta">Subscribe</span>
       </a>
       <a class="plat tt" href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">
@@ -366,7 +367,7 @@
           <span class="plat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.6a2.9 2.9 0 1 1-2-2.7V9.4a6.3 6.3 0 1 0 5.4 6.2V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.9 4.9 0 0 1-1-.1z"/></svg></span>
           <div><div class="plat-name">TikTok</div><div class="plat-handle">@nshinjii</div></div>
         </div>
-        <div class="plat-count"><b data-stat="tiktok">–</b><span>followers</span></div>
+        <div class="plat-count"><b data-stat="tiktok">–</b><span>followers</span><div class="plat-extra" data-extra="tiktok"></div></div>
         <span class="plat-cta">Follow</span>
       </a>
       <a class="plat ig" href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">
@@ -374,7 +375,7 @@
           <span class="plat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></span>
           <div><div class="plat-name">Instagram</div><div class="plat-handle">@nshinjiiii</div></div>
         </div>
-        <div class="plat-count"><b data-stat="instagram">–</b><span>followers</span></div>
+        <div class="plat-count"><b data-stat="instagram">–</b><span>followers</span><div class="plat-extra" data-extra="instagram"></div></div>
         <span class="plat-cta">Follow</span>
       </a>
       <div class="plat site-live" aria-live="polite">
@@ -564,16 +565,21 @@
 
 <script>
   // ===== STATS: your follower counts, e.g. "12.4K". Update these whenever they grow. =====
+  // Last updated 26 Oct 2026
   const STATS = {
-    youtube: "",
-    tiktok: "",
-    instagram: "",
+    youtube:   { count: "74",    extra: "9 videos" },
+    tiktok:    { count: "5,129", extra: "132 likes" },
+    instagram: { count: "",      extra: "" },
   };
   // =========================================================================================
 
   document.querySelectorAll('[data-stat]').forEach(el => {
     const v = STATS[el.dataset.stat];
-    if (v) el.textContent = v;
+    if (v && v.count) el.textContent = v.count;
+  });
+  document.querySelectorAll('[data-extra]').forEach(el => {
+    const v = STATS[el.dataset.extra];
+    if (v && v.extra) el.textContent = v.extra; else el.remove();
   });
   document.getElementById('year').textContent = new Date().getFullYear();
 
