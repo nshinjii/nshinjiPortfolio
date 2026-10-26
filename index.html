@@ -111,25 +111,36 @@
   .head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px 40px; margin-bottom: clamp(32px, 5vw, 56px); }
   .head .lede { max-width: 26em; }
 
-  /* Socials strip */
-  .socials { background: var(--ink); color: #fff; padding: 0; }
-  .socials .wrap { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .soc { display: flex; align-items: center; gap: 16px; padding: 30px 26px; text-decoration: none; border-left: 1px solid #ffffff1c; transition: background .2s; }
-  .soc:first-child { border-left: 0; }
-  .soc:hover { background: #ffffff0d; }
-  .soc svg { width: 34px; height: 34px; flex: none; fill: #fff; }
-  .soc .k { font-weight: 700; font-size: 19px; }
-  .soc .v { color: #A9AEBE; font-size: 15px; }
-  .soc .v b { color: #fff; font-weight: 700; }
-  .soc .go { margin-left: auto; font-size: 22px; color: #A9AEBE; transition: transform .2s, color .2s; }
-  .soc:hover .go { color: var(--yellow); transform: translate(3px, -3px); }
-
-  /* Videos */
-  .tv { background: var(--paper); border: 3px solid var(--ink); border-radius: 22px; padding: clamp(10px, 1.4vw, 16px); box-shadow: 0 10px 0 0 var(--ink); }
-  .tv .screen { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--ink); }
-  .tv iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .topics { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
-  .topics span { font-weight: 600; padding: 8px 15px; border-radius: 999px; background: var(--paper); border: 2px solid var(--ink); }
+  /* Socials */
+  .plats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .plat {
+    --c: var(--paper); --fg: var(--ink);
+    position: relative; display: flex; flex-direction: column; gap: 26px; min-height: 300px;
+    padding: 24px; border: 3px solid var(--ink); border-radius: 20px;
+    background: var(--c); color: var(--fg); text-decoration: none;
+    box-shadow: 0 8px 0 0 var(--ink); transition: transform .14s, box-shadow .14s;
+  }
+  a.plat:hover { transform: translateY(-3px); box-shadow: 0 11px 0 0 var(--ink); }
+  a.plat:active { transform: translateY(8px); box-shadow: 0 0 0 0 var(--ink); }
+  .plat.yt { --c: var(--red); --fg: #fff; }
+  .plat.tt { --c: var(--ink); --fg: #fff; box-shadow: 0 8px 0 0 #000; }
+  .plat.ig { --c: var(--yellow); }
+  .plat.site-live { --c: var(--mint); }
+  .plat-head { display: flex; align-items: center; gap: 14px; }
+  .plat-icon { width: 50px; height: 50px; flex: none; display: grid; place-items: center; border-radius: 14px; background: var(--paper); border: 3px solid var(--ink); }
+  .plat-icon svg { width: 26px; height: 26px; fill: var(--ink); }
+  .plat-name { font-weight: 800; font-size: 21px; letter-spacing: -0.02em; line-height: 1.1; }
+  .plat-handle { font-size: 15px; opacity: .78; }
+  .plat-count { margin-top: auto; }
+  .plat-count b { display: block; font-weight: 800; font-size: clamp(48px, 5vw, 68px); letter-spacing: -0.045em; line-height: .95; font-variation-settings: "opsz" 96; font-variant-numeric: tabular-nums; }
+  .plat-count span { font-weight: 600; font-size: 16px; opacity: .85; }
+  .plat-cta { align-self: flex-start; font-weight: 700; font-size: 15px; padding: 9px 16px; border-radius: 10px; background: var(--paper); color: var(--ink); border: 2.5px solid var(--ink); }
+  .plat .total { font-size: 16px; padding-top: 14px; border-top: 2.5px solid #15171f33; }
+  .plat .total b { font-weight: 800; font-variant-numeric: tabular-nums; }
+  .pulse { width: 16px; height: 16px; border-radius: 50%; background: var(--mint); border: 3px solid var(--ink); animation: beat 1.6s ease-out infinite; }
+  @keyframes beat { 0% { box-shadow: 0 0 0 0 #22c99399; } 100% { box-shadow: 0 0 0 14px #22c99300; } }
+  .bump { animation: bump .45s ease; display: inline-block; }
+  @keyframes bump { 40% { transform: translateY(-6px) scale(1.06); } }
 
   /* Websites */
   .work { background: var(--paper); border-block: 3px solid var(--ink); }
@@ -225,24 +236,22 @@
   footer a { color: #fff; }
 
   @media (prefers-reduced-motion: reduce) {
-    .brick, .brick.wobble { animation: none; }
+    .brick, .brick.wobble, .pulse, .bump { animation: none; }
     html { scroll-behavior: auto; }
   }
   @media (max-width: 980px) {
-    .plans { grid-template-columns: 1fr 1fr; }
+    .plans, .plats { grid-template-columns: 1fr 1fr; }
     .plan.featured { transform: none; }
   }
   @media (max-width: 860px) {
     .nav-links { display: none; }
     .hero .wrap, .sites, .about .wrap, .contact .wrap { grid-template-columns: 1fr; }
-    .socials .wrap { grid-template-columns: 1fr; padding: 0; }
-    .soc { border-left: 0; border-top: 1px solid #ffffff1c; padding: 22px var(--gutter); }
-    .soc:first-child { border-top: 0; }
     .pile { max-width: 520px; }
     .avatar { max-width: 380px; }
   }
   @media (max-width: 560px) {
-    .plans, .row2 { grid-template-columns: 1fr; }
+    .plans, .row2, .plats { grid-template-columns: 1fr; }
+    .plat { min-height: 0; }
     .brick { border-width: 2.5px; -webkit-text-stroke-width: 2px; border-radius: 10px; }
     .brick::before, .brick::after { border-width: 2.5px; height: 9px; top: -10px; }
   }
@@ -254,7 +263,7 @@
   <div class="wrap">
     <a href="#top" class="brand"><i></i>nshinji</a>
     <div class="nav-links">
-      <a href="#videos">Videos</a>
+      <a href="#socials">Socials</a>
       <a href="#websites">Websites</a>
       <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
@@ -268,7 +277,7 @@
     <div>
       <div class="live"><b></b>Taking website projects now</div>
       <h1>I make Roblox videos and build websites for creators.</h1>
-      <p class="lede">Blox Fruits funny moments, challenges and Shorts on YouTube. Fast, custom websites that put a creator's videos, socials and community in one place.</p>
+      <p class="lede">Roblox and Blox Fruits content on YouTube, TikTok and Instagram. Fast, custom websites that put a creator's videos, socials and community in one place.</p>
       <div class="hero-ctas">
         <a href="#pricing" class="btn blue">See website prices</a>
         <a href="https://www.youtube.com/@nshinjiiii?sub_confirmation=1" target="_blank" rel="noopener" class="btn light">Subscribe on YouTube</a>
@@ -287,40 +296,46 @@
   </div>
 </header>
 
-<!-- Follower counts come from the STATS block at the bottom of this file -->
-<section class="socials" aria-label="Social accounts">
-  <div class="wrap">
-    <a class="soc" href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-      <div><div class="k">YouTube</div><div class="v" data-stat="youtube" data-label="subscribers">@nshinjiiii</div></div>
-      <span class="go" aria-hidden="true">↗</span>
-    </a>
-    <a class="soc" href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.6a2.9 2.9 0 1 1-2-2.7V9.4a6.3 6.3 0 1 0 5.4 6.2V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.9 4.9 0 0 1-1-.1z"/></svg>
-      <div><div class="k">TikTok</div><div class="v" data-stat="tiktok" data-label="followers">@nshinjii</div></div>
-      <span class="go" aria-hidden="true">↗</span>
-    </a>
-    <a class="soc" href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
-      <div><div class="k">Instagram</div><div class="v" data-stat="instagram" data-label="followers">@nshinjiiii</div></div>
-      <span class="go" aria-hidden="true">↗</span>
-    </a>
-  </div>
-</section>
-
-<section id="videos">
+<section id="socials">
   <div class="wrap">
     <div class="head">
-      <h2>Latest videos</h2>
-      <p class="lede">New uploads from the channel play here automatically, newest first.</p>
+      <h2>Follow along</h2>
+      <p class="lede">Where to find me, and who's on this site right now.</p>
     </div>
-    <div class="tv">
-      <div class="screen">
-        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=UUIa-bzHuoaBa6HxGaRTyA7g" title="nshinji's latest YouTube uploads" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Follower counts come from the STATS block at the bottom of this file -->
+    <div class="plats">
+      <a class="plat yt" href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">
+        <div class="plat-head">
+          <span class="plat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></span>
+          <div><div class="plat-name">YouTube</div><div class="plat-handle">@nshinjiiii</div></div>
+        </div>
+        <div class="plat-count"><b data-stat="youtube">–</b><span>subscribers</span></div>
+        <span class="plat-cta">Subscribe</span>
+      </a>
+      <a class="plat tt" href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">
+        <div class="plat-head">
+          <span class="plat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.6a2.9 2.9 0 1 1-2-2.7V9.4a6.3 6.3 0 1 0 5.4 6.2V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8a4.9 4.9 0 0 1-1-.1z"/></svg></span>
+          <div><div class="plat-name">TikTok</div><div class="plat-handle">@nshinjii</div></div>
+        </div>
+        <div class="plat-count"><b data-stat="tiktok">–</b><span>followers</span></div>
+        <span class="plat-cta">Follow</span>
+      </a>
+      <a class="plat ig" href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">
+        <div class="plat-head">
+          <span class="plat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg></span>
+          <div><div class="plat-name">Instagram</div><div class="plat-handle">@nshinjiiii</div></div>
+        </div>
+        <div class="plat-count"><b data-stat="instagram">–</b><span>followers</span></div>
+        <span class="plat-cta">Follow</span>
+      </a>
+      <div class="plat site-live" aria-live="polite">
+        <div class="plat-head">
+          <span class="plat-icon"><span class="pulse"></span></span>
+          <div><div class="plat-name">This website</div><div class="plat-handle">Updates live</div></div>
+        </div>
+        <div class="plat-count"><b id="now-count">–</b><span id="now-label">here right now</span></div>
+        <div class="total"><b id="visit-count">–</b> total visits</div>
       </div>
-    </div>
-    <div class="topics" aria-label="What the channel covers">
-      <span>Roblox</span><span>Blox Fruits</span><span>Funny moments</span><span>Challenges</span><span>Updates</span><span>Shorts</span>
     </div>
   </div>
 </section>
@@ -492,19 +507,73 @@
 </footer>
 
 <script>
-  // ===== STATS: put your follower counts here, e.g. "12.4K". Leave "" to just show your @handle =====
+  // ===== STATS: your follower counts, e.g. "12.4K". Update these whenever they grow. =====
   const STATS = {
     youtube: "",
     tiktok: "",
     instagram: "",
   };
-  // ===================================================================================================
+  // =========================================================================================
 
   document.querySelectorAll('[data-stat]').forEach(el => {
     const v = STATS[el.dataset.stat];
-    if (v) el.innerHTML = '<b>' + v + '</b> ' + el.dataset.label;
+    if (v) el.textContent = v;
   });
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Live visitors (free Abacus counter service, no account needed) =====
+  (() => {
+    const API = 'https://abacus.jasoncameron.dev';
+    const NS = 'nshinjiportfolio';
+    const nowEl = document.getElementById('now-count');
+    const nowLabel = document.getElementById('now-label');
+    const visitEl = document.getElementById('visit-count');
+    const fmt = n => Number(n).toLocaleString('en-US');
+    const bump = el => { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); };
+    const get = path => fetch(API + path).then(r => r.ok ? r.json() : { value: 0 }).then(j => j.value || 0).catch(() => null);
+
+    function setVisits(v) {
+      if (v == null) return;
+      if (visitEl.textContent !== fmt(v)) { visitEl.textContent = fmt(v); bump(visitEl); }
+    }
+
+    // Total visits: count once per browser session, then follow new visits as they happen
+    let counted = false;
+    try { counted = sessionStorage.getItem('nshinji-counted') === '1'; } catch {}
+    (counted ? get('/get/' + NS + '/visits') : get('/hit/' + NS + '/visits')).then(v => {
+      setVisits(v);
+      if (!counted && v != null) { try { sessionStorage.setItem('nshinji-counted', '1'); } catch {} }
+    });
+    if ('EventSource' in window) {
+      try {
+        const es = new EventSource(API + '/stream/' + NS + '/visits');
+        es.onmessage = e => { try { setVisits(JSON.parse(e.data).value); } catch {} };
+      } catch {}
+    }
+
+    // People here now: each open tab checks in once a minute; we count this minute's and last minute's check-ins
+    const minuteKey = offset => {
+      const d = new Date(Date.now() - offset * 60000);
+      const p = n => String(n).padStart(2, '0');
+      return 'now-' + d.getUTCFullYear() + p(d.getUTCMonth() + 1) + p(d.getUTCDate()) + p(d.getUTCHours()) + p(d.getUTCMinutes());
+    };
+    let lastCheckIn = '';
+    async function tick() {
+      if (document.hidden) return;
+      const key = minuteKey(0);
+      let cur;
+      if (key !== lastCheckIn) { cur = await get('/hit/' + NS + '/' + key); lastCheckIn = key; }
+      else cur = await get('/get/' + NS + '/' + key);
+      const prev = await get('/get/' + NS + '/' + minuteKey(1));
+      if (cur == null && prev == null) return;
+      const n = Math.max(1, cur || 0, prev || 0);
+      if (nowEl.textContent !== fmt(n)) { nowEl.textContent = fmt(n); bump(nowEl); }
+      nowLabel.textContent = n === 1 ? 'here right now (you)' : 'here right now';
+    }
+    tick();
+    setInterval(tick, 15000);
+    document.addEventListener('visibilitychange', tick);
+  })();
 
   // Bricks wobble when tapped
   document.querySelectorAll('.brick:not(.ghost)').forEach(b => {
