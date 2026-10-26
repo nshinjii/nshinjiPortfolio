@@ -241,6 +241,7 @@
   .contact .side-links { display: flex; flex-wrap: wrap; gap: 10px; }
   form { background: var(--bg); box-shadow: inset 0 0 0 1px var(--line); border-radius: 26px; padding: clamp(22px, 3.2vw, 38px); display: grid; gap: 20px; }
   .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .row2.reach { align-items: end; }
   .field { display: grid; gap: 8px; }
   .field label, .field .lab { font-weight: 700; font-size: 15px; }
   .field input, .field select, .field textarea {
@@ -519,6 +520,27 @@
         <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required maxlength="200" autocomplete="email"></div>
       </div>
 
+      <div class="row2 reach">
+        <div class="field">
+          <label for="f-platform">Best way for nshinji to reach you after email</label>
+          <select id="f-platform" name="contact_platform" required data-label="the platform to reach you on">
+            <option value="" disabled selected>Choose a platform</option>
+            <option>WhatsApp</option>
+            <option>Discord</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>Snapchat</option>
+            <option>Telegram</option>
+            <option>Phone or text</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-handle" id="f-handle-label">Username or number</label>
+          <input id="f-handle" name="contact_handle" required maxlength="120" placeholder="Pick a platform first" data-label="your username or number">
+        </div>
+      </div>
+
       <div class="field">
         <label for="f-topic">What's it about?</label>
         <select id="f-topic" name="topic">
@@ -697,6 +719,29 @@
   });
 
   // Send through FormSubmit to the inbox, without leaving the page
+  // Placeholder for the contact handle follows the chosen platform
+  const platform = document.getElementById('f-platform');
+  const handle = document.getElementById('f-handle');
+  const handleLabel = document.getElementById('f-handle-label');
+  const HANDLE_HINT = {
+    'WhatsApp': ['WhatsApp number', 'e.g. +44 7700 900123'],
+    'Phone or text': ['Phone number', 'e.g. +44 7700 900123'],
+    'Discord': ['Discord username', 'e.g. nshinji'],
+    'Instagram': ['Instagram username', 'e.g. @yourname'],
+    'TikTok': ['TikTok username', 'e.g. @yourname'],
+    'Snapchat': ['Snapchat username', 'e.g. yourname'],
+    'Telegram': ['Telegram username', 'e.g. @yourname'],
+    'Other': ['Where and who', 'e.g. X: @yourname'],
+  };
+  platform.addEventListener('change', () => {
+    const [label, hint] = HANDLE_HINT[platform.value] || ['Username or number', ''];
+    handleLabel.textContent = label;
+    handle.placeholder = hint;
+    handle.type = /number/i.test(label) ? 'tel' : 'text';
+    handle.focus();
+  });
+  const resetHandle = () => { handleLabel.textContent = 'Username or number'; handle.placeholder = 'Pick a platform first'; handle.type = 'text'; };
+
   const form = document.getElementById('contact-form');
   const send = document.getElementById('f-btn');
   const status = document.getElementById('f-status');
@@ -705,11 +750,12 @@
     const missing = [...form.querySelectorAll('[required]')].find(f => !f.value.trim() || (f.type === 'email' && !/^\S+@\S+\.\S+$/.test(f.value)));
     if (missing) {
       status.className = 'form-msg err';
-      status.textContent = missing.type === 'email' ? 'Enter a valid email so I can reply.' : 'Fill in your ' + missing.name + ' to send.';
+      status.textContent = missing.type === 'email' ? 'Enter a valid email so I can reply.' : 'Add ' + (missing.dataset.label || 'your ' + missing.name) + ' to send.';
       missing.focus();
       return;
     }
     const data = new FormData(form);
+    const sentVia = platform.value;
     if (topic.value !== 'Website') data.delete('budget');
     send.disabled = true; send.textContent = 'Sending…';
     status.className = 'form-msg'; status.textContent = '';
@@ -719,9 +765,9 @@
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok || json.success === false || json.success === 'false') throw new Error();
-      form.reset(); range.value = 5; updateBudget(); budgetField.style.display = '';
+      form.reset(); resetHandle(); range.value = 5; updateBudget(); budgetField.style.display = '';
       status.className = 'form-msg ok';
-      status.textContent = 'Message sent. I’ll reply to your email soon.';
+      status.textContent = 'Message sent. I’ll get back to you on ' + sentVia + ' soon.';
     } catch {
       status.className = 'form-msg err';
       status.textContent = 'Message not sent. Email nshinjicontact@protonmail.com instead.';
