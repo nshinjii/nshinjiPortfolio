@@ -388,6 +388,73 @@ footer a:hover{color:var(--paper-ink)}
   .status b{animation:none}
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
+
+/* ===== tighter, centred layout ===== */
+:root{--max:1160px}
+.wrap{padding-left:max(var(--m),env(safe-area-inset-left,0px),calc((100% - var(--max)) / 2));padding-right:max(var(--m),env(safe-area-inset-right,0px),calc((100% - var(--max)) / 2))}
+.sec{padding-block:clamp(64px,7vw,112px)}
+.h2,.c-left h2{font-size:clamp(2.25rem,1.3rem + 3vw,3.75rem)}
+.lead{font-size:clamp(1.125rem,1.05rem + .4vw,1.375rem)}
+
+/* sticky glass nav */
+header.wrap{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
+.nav{padding-block:12px}
+section{scroll-margin-top:76px}
+.controls{top:68px}
+@media (max-width:700px){.controls{top:68px}}
+
+/* hero: one tidy column, no dead space */
+.hero{min-height:auto;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;z-index:-1;inset:-80px 0 auto;height:520px;background:radial-gradient(60% 70% at 18% 20%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%);pointer-events:none}
+.hero-copy{padding-top:clamp(48px,7vw,96px)}
+.hero h1{font-size:clamp(2.25rem,1rem + 4.2vw,4.25rem);max-width:21ch;line-height:.98}
+@media (min-width:1200px){.hero h1{max-width:21ch;font-size:4.25rem}}
+.hero-sub{grid-column:1/9;margin-top:24px;max-width:40ch;color:var(--muted)}
+.hero-acts{grid-column:1/-1;justify-content:flex-start;align-self:start;margin-top:32px}
+.status{margin-top:18px}
+.wall{margin-top:0;padding-top:clamp(48px,6vw,80px);padding-bottom:0}
+@media (min-width:900px){.bricks{--br:1.6}.brick{font-size:clamp(3rem,6.4vw,5.5rem)}}
+
+/* cards: crisper edges, gentle lift */
+.soc a,.counter div,.proj,.plan,.diy,.hours div,.care div,.faq details,.done{border:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.plan.hot,.proj.next{border-color:transparent}
+.soc a{padding:18px 22px}
+.soc strong{font-size:1.25rem}
+.proj,.plan,.care div{transition:background-color .25s,transform .35s var(--ease),box-shadow .35s var(--ease)}
+@media (hover:hover){.plan:hover,.care div:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(0,0,0,.45)}}
+
+/* work */
+.work-head{margin-bottom:32px}
+.proj{padding:clamp(24px,2.4vw,36px) clamp(20px,2.4vw,36px);align-items:center}
+.proj h3{font-size:clamp(1.75rem,.9rem + 2.6vw,3rem)}
+
+/* pricing */
+.controls{margin-top:32px}
+.plan{padding:26px 22px 22px}
+.big{font-size:clamp(2.5rem,1.6rem + 1.8vw,3.5rem)}
+.diy{margin-top:64px;padding:clamp(24px,3vw,44px)}
+.diy-tile{width:clamp(140px,13vw,190px);font-size:clamp(3rem,4.6vw,4.5rem)}
+
+/* upkeep, add-ons, faq */
+.after{margin-top:72px;border-top:1px solid var(--line)}
+.after-row{padding-block:40px;border-bottom:1px solid var(--line)}
+.after-row + .after-row{margin-top:0}
+.after-row h3{grid-column:1/5;font-size:clamp(1.5rem,1.2rem + 1vw,2.125rem)}
+.after-row .body{grid-column:5/-1}
+.faq summary{font-size:1.125rem;padding:18px 22px}
+.faq .ans{padding:0 22px 22px}
+
+/* about + contact */
+.about .body{max-width:62ch}
+.email{margin-top:32px;font-size:clamp(1.5rem,.9rem + 1.6vw,2.25rem)}
+
+/* footer */
+footer{padding-top:64px}
+@media (min-width:761px){.f-cols{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+.f-cols a[href^="mailto"]{word-break:normal;overflow-wrap:normal;white-space:nowrap}
+.f-word{margin-top:clamp(48px,7vw,104px)}
+
+@media (max-width:900px){.after-row .body{grid-column:1/-1}.hero-sub{grid-column:1/-1}}
 </style>
 </head>
 <body class="no-js">
@@ -450,7 +517,7 @@ footer a:hover{color:var(--paper-ink)}
     <ul class="soc">
       <li class="rise"><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener"><strong>YouTube</strong><span>@nshinjiiii · <span data-count="youtube">–</span> subscribers</span><em>Subscribe</em></a></li>
       <li class="rise" style="--d:70ms"><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener"><strong>TikTok</strong><span>@nshinjii · <span data-count="tiktok">–</span> followers</span><em>Follow</em></a></li>
-      <li class="rise" style="--d:140ms"><a href="https://www.instagram.com/nshinjiiii" target="_blank" rel="noopener"><strong>Instagram</strong><span>@nshinjiiii · <span data-count="instagram">–</span> followers</span><em>Follow</em></a></li>
+      <li class="rise" style="--d:140ms"><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener"><strong>Instagram</strong><span>@nshinjiii · <span data-count="instagram">–</span> followers</span><em>Follow</em></a></li>
     </ul>
     <div class="counter rise" style="--d:200ms" aria-live="polite">
       <div><strong data-count="live">–</strong><span class="muted small">here right now</span></div>
@@ -611,7 +678,7 @@ footer a:hover{color:var(--paper-ink)}
         <a class="btn wa-btn" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
         <a class="btn btn-quiet only-phone" href="tel:+447865606629">Call</a>
       </div>
-      <div class="c-soc"><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/nshinjiiii" target="_blank" rel="noopener">Instagram</a></div>
+      <div class="c-soc"><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">Instagram</a></div>
     </div>
 
     <form id="form" novalidate aria-labelledby="contact-h">
@@ -653,7 +720,7 @@ footer a:hover{color:var(--paper-ink)}
     <div><h4>Contact</h4><ul><li><a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></li><li><a href="tel:+447865606629">+44 7865 606629</a></li></ul>
       <a class="f-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a></div>
     <div><h4>On this site</h4><ul><li><a href="#socials">Socials</a></li><li><a href="#websites">Websites</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
-    <div><h4>Follow</h4><ul><li><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.instagram.com/nshinjiiii" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     <div><h4>Work</h4><ul><li><a href="https://sg0hann.online" target="_blank" rel="noopener">sg0hann.online</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
   </div>
   <svg class="f-word" viewBox="0 0 1000 178" role="img" aria-label="nshinji"><text x="-6" y="168" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="226" letter-spacing="-9" textLength="1008" lengthAdjust="spacingAndGlyphs" fill="currentColor">NSHINJI</text></svg>
