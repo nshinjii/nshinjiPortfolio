@@ -455,6 +455,10 @@ footer{padding-top:64px}
 .f-word{margin-top:clamp(48px,7vw,104px)}
 
 @media (max-width:900px){.after-row .body{grid-column:1/-1}.hero-sub{grid-column:1/-1}}
+.counter strong.bump{animation:bump .5s var(--snap)}
+@keyframes bump{40%{transform:scale(1.18);color:var(--accent-text)}}
+.counter strong{display:inline-block}
+.counter .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3ddc84;margin-right:8px;vertical-align:middle;animation:pulse 2.4s infinite}
 </style>
 </head>
 <body class="no-js">
@@ -520,7 +524,7 @@ footer{padding-top:64px}
       <li class="rise" style="--d:140ms"><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener"><strong>Instagram</strong><span>@nshinjiii · <span data-count="instagram">–</span> followers</span><em>Follow</em></a></li>
     </ul>
     <div class="counter rise" style="--d:200ms" aria-live="polite">
-      <div><strong data-count="live">–</strong><span class="muted small">here right now</span></div>
+      <div><strong data-count="live">–</strong><span class="muted small"><i class="live-dot" aria-hidden="true"></i><span id="now-label">here right now</span></span></div>
       <div><strong data-count="visits">–</strong><span class="muted small">total visits to this site</span></div>
     </div>
   </div>
@@ -991,6 +995,63 @@ tBtn.addEventListener('click',()=>{
 sysDark.addEventListener('change',paintTheme);
 new MutationObserver(paintTheme).observe(rootEl,{attributes:true,attributeFilter:['data-theme']});
 paintTheme();
+})();
+</script>
+<script>
+(() => {
+  // ===== Follower counts: update these whenever they grow =====
+  // Last updated 26 Oct 2026
+  const STATS = { youtube: "74", tiktok: "5,129", instagram: "9" };
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const v = STATS[el.dataset.count]; if (v) el.textContent = v;
+  });
+
+  // ===== Live visitors and total visits (free Abacus counter, no account needed) =====
+  const API = 'https://abacus.jasoncameron.dev', NS = 'nshinjiportfolio';
+  const nowEl = document.querySelector('[data-count="live"]');
+  const visitEl = document.querySelector('[data-count="visits"]');
+  const nowLabel = document.getElementById('now-label');
+  if (!nowEl || !visitEl) return;
+  const fmt = n => Number(n).toLocaleString('en-GB');
+  const bump = el => { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); };
+  const get = path => fetch(API + path).then(r => r.ok ? r.json() : { value: 0 }).then(j => j.value || 0).catch(() => null);
+  const setVisits = v => { if (v == null) return; if (visitEl.textContent !== fmt(v)) { visitEl.textContent = fmt(v); bump(visitEl); } };
+
+  // Total visits: count once per browser session, then follow new visits live
+  let counted = false;
+  try { counted = sessionStorage.getItem('nshinji-counted') === '1'; } catch (_) {}
+  (counted ? get('/get/' + NS + '/visits') : get('/hit/' + NS + '/visits')).then(v => {
+    setVisits(v);
+    if (!counted && v != null) { try { sessionStorage.setItem('nshinji-counted', '1'); } catch (_) {} }
+  });
+  if ('EventSource' in window) {
+    try {
+      const es = new EventSource(API + '/stream/' + NS + '/visits');
+      es.onmessage = e => { try { setVisits(JSON.parse(e.data).value); } catch (_) {} };
+    } catch (_) {}
+  }
+
+  // People here now: each open tab checks in once a minute; count this minute's and last minute's check-ins
+  const minuteKey = off => {
+    const d = new Date(Date.now() - off * 60000), p = n => String(n).padStart(2, '0');
+    return 'now-' + d.getUTCFullYear() + p(d.getUTCMonth() + 1) + p(d.getUTCDate()) + p(d.getUTCHours()) + p(d.getUTCMinutes());
+  };
+  let lastCheckIn = '';
+  async function tick() {
+    if (document.hidden) return;
+    const key = minuteKey(0);
+    let cur;
+    if (key !== lastCheckIn) { cur = await get('/hit/' + NS + '/' + key); lastCheckIn = key; }
+    else cur = await get('/get/' + NS + '/' + key);
+    const prev = await get('/get/' + NS + '/' + minuteKey(1));
+    if (cur == null && prev == null) return;
+    const n = Math.max(1, cur || 0, prev || 0);
+    if (nowEl.textContent !== fmt(n)) { nowEl.textContent = fmt(n); bump(nowEl); }
+    if (nowLabel) nowLabel.textContent = n === 1 ? 'here right now (you)' : 'here right now';
+  }
+  tick();
+  setInterval(tick, 15000);
+  document.addEventListener('visibilitychange', tick);
 })();
 </script>
 </body>
