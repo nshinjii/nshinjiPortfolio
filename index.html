@@ -461,6 +461,22 @@ footer{padding-top:64px}
 @keyframes bump{40%{transform:scale(1.18);color:var(--accent-text)}}
 .counter strong{display:inline-block}
 .counter .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#3ddc84;margin-right:8px;vertical-align:middle;animation:pulse 2.4s infinite}
+/* cookie banner */
+.ck{position:fixed;z-index:70;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));max-width:520px;max-height:calc(100dvh - 32px);overflow:auto;padding:20px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.ck[hidden]{display:none}
+.ck:focus{outline:none}
+.ck h2{margin:0;font-size:1.125rem;font-weight:800;letter-spacing:-.01em;line-height:1.3}
+.ck p,.ck li{font-size:var(--step-small);color:var(--muted);line-height:1.5}
+.ck p{margin:6px 0 0}
+.ck ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.ck li b{color:var(--ink);font-weight:500}
+.ck-acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+.ck-btn{all:unset;box-sizing:border-box;min-height:44px;padding:0 12px;display:grid;place-items:center;text-align:center;line-height:1.2;border-radius:var(--radius);background:var(--surface-2);color:var(--ink);font-weight:500;font-size:var(--step-small);cursor:pointer;transition:background-color .2s}
+.ck-btn:hover{background:var(--surface-3)}
+.ck-btn:focus-visible,.ck-link:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}
+.ck-btn[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
+.ck-link{all:unset;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:420px){.ck-acts{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="no-js">
@@ -730,11 +746,48 @@ footer{padding-top:64px}
     <div><h4>Work</h4><ul><li><a href="https://sg0hann.online" target="_blank" rel="noopener">sg0hann.online</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
   </div>
   <svg class="f-word" viewBox="0 0 1000 178" role="img" aria-label="nshinji"><text x="-6" y="168" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="226" letter-spacing="-9" textLength="1008" lengthAdjust="spacingAndGlyphs" fill="currentColor">NSHINJI</text></svg>
-  <div class="legal"><span>© nshinji · UK</span><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
+  <div class="legal"><span>© nshinji · UK</span><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
 </footer>
 
 <a class="float-wa" id="float-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener" aria-label="Message nshinji on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
+<section class="ck" id="ck" hidden tabindex="-1" aria-labelledby="ck-h">
+  <h2 id="ck-h">Cookies on this site</h2>
+  <p>Pick what this site may save in your browser. You can change it any time from Cookie settings at the bottom of the page.</p>
+  <ul>
+    <li><b>Required:</b> remembers your cookie choice and your light or dark mode.</li>
+    <li><b>Optional:</b> the visitor counter, which counts your visit and shows how many people are here now.</li>
+  </ul>
+  <div class="ck-acts">
+    <button class="ck-btn" type="button" data-ck="all">Accept all</button>
+    <button class="ck-btn" type="button" data-ck="required">Required only</button>
+    <button class="ck-btn" type="button" data-ck="none">Reject all</button>
+  </div>
+</section>
+<script>
+// cookie choice: 'all', 'required' or 'none'. 'none' is only kept for this visit, so the banner asks again next time.
+(()=>{
+  const KEY='nshinji-consent', OK=['all','required','none'], bar=document.getElementById('ck'), subs=[];
+  let choice=null, returnTo=null;
+  try{ choice=localStorage.getItem(KEY)||sessionStorage.getItem(KEY); }catch(_){}
+  if(!OK.includes(choice)) choice=null;
+  function mark(){ bar.querySelectorAll('[data-ck]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ck===choice))); }
+  function set(c){
+    if(!OK.includes(c)) return;
+    choice=c;
+    try{ localStorage.removeItem(KEY); sessionStorage.removeItem(KEY); (c==='none'?sessionStorage:localStorage).setItem(KEY,c); }catch(_){}
+    bar.hidden=true;
+    subs.forEach(f=>{ try{ f(c); }catch(_){} });
+  }
+  function hide(){ bar.hidden=true; if(returnTo){ returnTo.focus(); returnTo=null; } }
+  function show(focus){ mark(); bar.hidden=false; if(focus) bar.focus(); }
+  bar.addEventListener('click',e=>{ const b=e.target.closest('[data-ck]'); if(b){ set(b.dataset.ck); hide(); } });
+  bar.addEventListener('keydown',e=>{ if(e.key==='Escape' && choice){ hide(); } });
+  document.addEventListener('click',e=>{ const o=e.target.closest('[data-ck-open]'); if(o){ e.preventDefault(); returnTo=o; show(true); } });
+  window.nshinjiConsent={ get:()=>choice, set, on:f=>subs.push(f) };
+  if(!choice) show(false);
+})();
+</script>
 <script>
 document.body.classList.remove('no-js');
 (()=>{
@@ -980,7 +1033,8 @@ document.addEventListener('click',e=>{ if(nav.classList.contains('open') && !nav
 // light / dark toggle: follows the device until the visitor picks one
 const rootEl = document.documentElement, tBtn = document.getElementById('theme');
 const sysDark = matchMedia('(prefers-color-scheme: dark)');
-let saved = null; try{ saved = localStorage.getItem('nshinji-theme'); }catch(_){}
+const C = window.nshinjiConsent, canSave = ()=> ['all','required'].includes(C.get());
+let saved = null; try{ if(canSave()) saved = localStorage.getItem('nshinji-theme'); else if(C.get()==='none') localStorage.removeItem('nshinji-theme'); }catch(_){}
 const isDark = ()=> rootEl.dataset.theme ? rootEl.dataset.theme==='dark' : sysDark.matches;
 function paintTheme(){
   const d = isDark();
@@ -991,9 +1045,10 @@ function paintTheme(){
 if(saved==='light'||saved==='dark') rootEl.dataset.theme = saved;
 tBtn.addEventListener('click',()=>{
   const next = isDark()?'light':'dark'; rootEl.dataset.theme = next;
-  try{ localStorage.setItem('nshinji-theme',next); }catch(_){}
+  try{ if(canSave()) localStorage.setItem('nshinji-theme',next); }catch(_){}
   paintTheme();
 });
+C.on(()=>{ try{ if(!canSave()) localStorage.removeItem('nshinji-theme'); else if(rootEl.dataset.theme) localStorage.setItem('nshinji-theme',rootEl.dataset.theme); }catch(_){} });
 sysDark.addEventListener('change',paintTheme);
 new MutationObserver(paintTheme).observe(rootEl,{attributes:true,attributeFilter:['data-theme']});
 paintTheme();
@@ -1014,11 +1069,18 @@ paintTheme();
   const visitEl = document.querySelector('[data-count="visits"]');
   const nowLabel = document.getElementById('now-label');
   if (!nowEl || !visitEl) return;
+  // Only runs once the visitor picks "Accept all"
+  const C = window.nshinjiConsent;
+  let on = false, es = null, timer = null, check = () => {};
+  const offLabel = () => { nowEl.textContent = '–'; visitEl.textContent = '–'; if (nowLabel) nowLabel.textContent = 'counter off (cookie settings)'; };
   const fmt = n => Number(n).toLocaleString('en-GB');
   const bump = el => { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); };
   const get = path => fetch(API + path).then(r => r.ok ? r.json() : { value: 0 }).then(j => j.value || 0).catch(() => null);
-  const setVisits = v => { if (v == null) return; if (visitEl.textContent !== fmt(v)) { visitEl.textContent = fmt(v); bump(visitEl); } };
+  const setVisits = v => { if (!on || v == null) return; if (visitEl.textContent !== fmt(v)) { visitEl.textContent = fmt(v); bump(visitEl); } };
 
+  function start() {
+  if (on) return; on = true;
+  if (nowLabel) nowLabel.textContent = 'here right now';
   // Total visits: count once per browser session, then follow new visits live
   let counted = false;
   try { counted = sessionStorage.getItem('nshinji-counted') === '1'; } catch (_) {}
@@ -1028,8 +1090,8 @@ paintTheme();
   });
   if ('EventSource' in window) {
     try {
-      const es = new EventSource(API + '/stream/' + NS + '/visits');
-      es.onmessage = e => { try { setVisits(JSON.parse(e.data).value); } catch (_) {} };
+      es = new EventSource(API + '/stream/' + NS + '/visits');
+      es.onmessage = e => { if (on) try { setVisits(JSON.parse(e.data).value); } catch (_) {} };
     } catch (_) {}
   }
 
@@ -1039,21 +1101,32 @@ paintTheme();
     return 'now-' + d.getUTCFullYear() + p(d.getUTCMonth() + 1) + p(d.getUTCDate()) + p(d.getUTCHours()) + p(d.getUTCMinutes());
   };
   let lastCheckIn = '';
-  async function tick() {
-    if (document.hidden) return;
+  check = async () => {
+    if (!on || document.hidden) return;
     const key = minuteKey(0);
     let cur;
     if (key !== lastCheckIn) { cur = await get('/hit/' + NS + '/' + key); lastCheckIn = key; }
     else cur = await get('/get/' + NS + '/' + key);
     const prev = await get('/get/' + NS + '/' + minuteKey(1));
-    if (cur == null && prev == null) return;
+    if (!on || (cur == null && prev == null)) return;
     const n = Math.max(1, cur || 0, prev || 0);
     if (nowEl.textContent !== fmt(n)) { nowEl.textContent = fmt(n); bump(nowEl); }
     if (nowLabel) nowLabel.textContent = n === 1 ? 'here right now (you)' : 'here right now';
-  }
+  };
   tick();
-  setInterval(tick, 15000);
+  timer = setInterval(tick, 15000);
+  }
+  function stop() {
+    on = false; if (es) { es.close(); es = null; } clearInterval(timer);
+    try { sessionStorage.removeItem('nshinji-counted'); } catch (_) {}
+    offLabel();
+  }
+  function tick() {
+    if (on) check();
+  }
   document.addEventListener('visibilitychange', tick);
+  C.on(c => c === 'all' ? start() : stop());
+  C.get() === 'all' ? start() : offLabel();
 })();
 </script>
 </body>
