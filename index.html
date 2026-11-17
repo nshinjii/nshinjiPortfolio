@@ -7,6 +7,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>nshinji: websites for creators, businesses and shops</title>
 <meta name="description" content="nshinji builds custom websites for creators, businesses and shops. Plans from $12/month, upkeep included.">
+<link rel="canonical" href="https://nshinjiportfolio.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="nshinji">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://nshinjiportfolio.com/">
+<meta property="og:title" content="nshinji: websites for creators, businesses and shops">
+<meta property="og:description" content="Fast, custom websites that look great on every phone, kept up to date for you. Plans from $12/month, upkeep included.">
+<meta property="og:image" content="https://nshinjiportfolio.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="nshinji: websites for creators, businesses and shops">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nshinjiportfolio.com/og-image.png">
 <meta name="theme-color" content="#09080c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -373,7 +388,10 @@ footer a:hover{color:var(--paper-ink)}
 @media (max-width:760px){.f-cols{grid-template-columns:1fr 1fr}}
 .f-word{margin-top:clamp(64px,12vw,200px);display:block;width:100%;height:auto}
 .legal a{display:inline-flex;min-height:44px;align-items:center}
-.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:6px 16px;font-size:var(--step-small);color:var(--paper-muted)}
+.legal-links{display:flex;flex-wrap:wrap;gap:0 20px}
+.form-note{margin:14px 0 0;font-size:var(--step-small)}
+.form-note a{text-decoration:underline;text-underline-offset:3px}
+.legal{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:6px 16px;font-size:var(--step-small);color:var(--paper-muted)}
 
 /* floating whatsapp */
 .float-wa{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;color:#04140a;display:none;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.45);transition:transform .35s var(--snap),opacity .25s}
@@ -727,6 +745,7 @@ footer{padding-top:64px}
       <div class="f full" id="own-wrap" hidden><label for="own">Your budget</label><input id="own" name="own_budget" inputmode="decimal" placeholder="e.g. $250"></div>
       <div class="f full"><label for="msg">Message</label><textarea id="msg" name="message" required aria-describedby="msg-err" placeholder="What are you building? Links to anything you like help."></textarea><p class="err" id="msg-err"></p></div>
       <div class="submit-row"><button class="btn btn-accent" type="submit">Send message <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="muted small">Or <a href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener">WhatsApp me</a> if that's easier.</span></div>
+      <p class="form-note muted">Your details are only used to reply to you. See the <a href="/privacy.html">privacy policy</a>.</p>
     </form>
     <div class="done" id="done" hidden tabindex="-1">
       <h3>Got it — I'll reply within 24 hours.</h3>
@@ -746,7 +765,7 @@ footer{padding-top:64px}
     <div><h4>Work</h4><ul><li><a href="https://sg0hann.online" target="_blank" rel="noopener">sg0hann.online</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
   </div>
   <svg class="f-word" viewBox="0 0 1000 178" role="img" aria-label="nshinji"><text x="-6" y="168" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="226" letter-spacing="-9" textLength="1008" lengthAdjust="spacingAndGlyphs" fill="currentColor">NSHINJI</text></svg>
-  <div class="legal"><span>© nshinji · UK</span><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
+  <div class="legal"><span>© nshinji · UK</span><span class="legal-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><button class="ck-link" type="button" data-ck-open>Cookie settings</button></span><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
 </footer>
 
 <a class="float-wa" id="float-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener" aria-label="Message nshinji on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
