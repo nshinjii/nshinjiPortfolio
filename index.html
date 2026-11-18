@@ -5,8 +5,22 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co https://abacus.jasoncameron.dev; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>nshinji: websites for creators, businesses and shops</title>
-<meta name="description" content="nshinji builds custom websites for creators, businesses and shops. Plans from $12/month, upkeep included.">
+<title>nshinji · Custom websites for creators, businesses and shops</title>
+<meta name="description" content="nshinji builds fast, custom websites for creators, businesses and shops, then keeps them updated. Plans from $12/month with upkeep included.">
+<link rel="canonical" href="https://nshinjiportfolio.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="nshinji">
+<meta property="og:title" content="nshinji · Custom websites for creators, businesses and shops">
+<meta property="og:description" content="Fast, custom sites that look right on every phone. Built and kept updated for you. From $12/month.">
+<meta property="og:url" content="https://nshinjiportfolio.com/">
+<meta property="og:image" content="https://nshinjiportfolio.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="nshinji: websites built brick by brick">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#09080c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +43,7 @@
   font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   font-optical-sizing:auto;
 }
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f5f9; --surface:#ecebf1; --surface-2:#e1dfe9; --surface-3:#d4d1df; --ink:#0d0b12; --muted:#55515f;
-  --paper:#110e19; --paper-ink:#f4f2f8; --paper-muted:#b4afc1;
-  --accent:#6d28d9; --accent-ink:#ffffff; --accent-text:#5b21b6;
-  --brick-dim:#b3aec0; --filled:#ece4fb; --line:#c9c5d4; --placeholder:#6c6878; --err:#c42b2b; --wa:#128c4b; --wa-paper:#3ddc84; --scroll:#c9c5d4;
-  color-scheme:light;}}
+
 :root[data-theme="light"]{--bg:#f6f5f9; --surface:#ecebf1; --surface-2:#e1dfe9; --surface-3:#d4d1df; --ink:#0d0b12; --muted:#55515f;
   --paper:#110e19; --paper-ink:#f4f2f8; --paper-muted:#b4afc1;
   --accent:#6d28d9; --accent-ink:#ffffff; --accent-text:#5b21b6;
@@ -95,7 +105,7 @@ button,a,summary,input,select,textarea{touch-action:manipulation;-webkit-tap-hig
 .is-dark .theme .sun{display:block}
 .is-dark .theme .moon{display:none}
 .menu-btn{display:none}
-@media (max-width:700px){
+@media (max-width:900px){
   header.wrap{position:relative;z-index:30}
   .menu-btn{all:unset;box-sizing:border-box;display:grid;place-items:center;width:44px;height:44px;border-radius:var(--radius);background:var(--surface);color:var(--ink);cursor:pointer}
   .menu-btn svg{width:20px;height:20px}
@@ -324,7 +334,7 @@ button,a,summary,input,select,textarea{touch-action:manipulation;-webkit-tap-hig
 .c-soc a{min-height:44px;display:inline-flex;align-items:center;font-weight:500}
 .only-phone{display:none!important}
 .only-phone-li{display:none}
-@media (max-width:700px){.only-phone-li{display:block}}
+@media (max-width:900px){.only-phone-li{display:block}}
 @media (max-width:760px){.only-phone{display:inline-flex!important}}
 form{scroll-margin-top:16px;grid-column:7/-1;display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;align-content:start}
 @media (max-width:900px){.c-left,form{grid-column:1/-1}form{margin-top:56px}}
@@ -403,7 +413,7 @@ header.wrap{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--
 .nav{padding-block:12px}
 section{scroll-margin-top:76px}
 .controls{top:68px}
-@media (max-width:700px){.controls{top:68px}}
+@media (max-width:900px){.controls{top:68px}}
 
 /* hero: one tidy column, no dead space */
 .hero{min-height:auto;position:relative;isolation:isolate}
@@ -477,6 +487,77 @@ footer{padding-top:64px}
 .ck-btn[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
 .ck-link{all:unset;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (max-width:420px){.ck-acts{grid-template-columns:1fr}}
+
+/* ===== scroll stage hero: one 3D brick, big type ===== */
+.stage{position:relative;height:240vh;isolation:isolate}
+.stage-pin{position:sticky;top:0;height:100svh;padding-top:68px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(24px,4vw,64px);overflow:hidden}
+.stage::before{content:"";position:absolute;z-index:-1;inset:0 0 auto;height:100svh;background:radial-gradient(50% 60% at 75% 45%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%),radial-gradient(40% 50% at 10% 10%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%);pointer-events:none}
+.stage-copy{padding-top:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:var(--step-small);padding:6px 12px 6px 10px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.eyebrow b{width:9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 #3ddc8466;animation:pulse 2.4s infinite}
+.stage h1{text-wrap:wrap;margin-top:24px;font-size:clamp(2.6rem,1rem + 5.4vw,6rem);line-height:.92;letter-spacing:-.05em;max-width:12ch}
+.swap{display:inline-block;color:var(--accent-text);overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.swap-in{display:inline-block}
+.swap-in.out{animation:swapOut .22s var(--ease) forwards}
+.swap-in.in{animation:swapIn .5s var(--snap)}
+@keyframes swapOut{to{transform:translateY(-100%);opacity:0}}
+@keyframes swapIn{from{transform:translateY(100%);opacity:0}to{transform:none;opacity:1}}
+.stage .hero-sub{margin-top:24px;max-width:38ch;color:var(--muted);font-size:var(--step-lead);line-height:1.3}
+.stage .hero-acts{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:32px}
+.btn-big{min-height:60px;padding:0 28px;font-size:1.125rem}
+
+.stage-obj{position:relative;height:min(70svh,560px);display:grid;place-items:center;perspective:1100px}
+.glow{position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--accent);filter:blur(90px);opacity:.35}
+.lego{--w:clamp(170px,22vw,290px);--h:calc(var(--w)*.72);--rx:-22deg;--ry:-32deg;--y:0px;position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:translateY(var(--y)) rotateX(var(--rx)) rotateY(var(--ry));will-change:transform}
+.lf{position:absolute;inset:0;background:var(--accent);border-radius:6px;backface-visibility:hidden;display:grid;place-items:center}
+.lf span{font-weight:800;color:var(--accent-ink);font-size:calc(var(--w)*.55);letter-spacing:-.05em;line-height:1;opacity:.95}
+.front{transform:translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#8b4cf5,#6a2bd6)}
+.back{transform:rotateY(180deg) translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#7a3ae8,#5a22b8)}
+.right{transform:rotateY(90deg) translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#6b2ed0,#4c1a9e)}
+.left{transform:rotateY(-90deg) translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#7d3ce9,#5b23ba)}
+.top{height:var(--w);top:calc((var(--h) - var(--w))/2);transform:rotateX(90deg) translateZ(calc(var(--h)/2));background:#9459f7;display:grid;place-items:stretch;grid-template-columns:1fr 1fr;padding:12%;gap:16%;transform-style:preserve-3d;backface-visibility:visible}
+.bottom{height:var(--w);top:calc((var(--h) - var(--w))/2);transform:rotateX(-90deg) translateZ(calc(var(--h)/2));background:#3d1580}
+.top i{border-radius:50%;background:radial-gradient(circle at 35% 30%,#b993ff,#8a4cf3 55%,#6a2bd6);box-shadow:0 0 0 2px #5b23ba inset;transform:translateZ(calc(var(--w)*.06));display:block}
+.shadow{position:absolute;bottom:4%;width:55%;height:26px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);filter:blur(4px)}
+:root[data-theme="light"] .shadow{background:radial-gradient(closest-side,rgba(40,20,80,.3),transparent)}
+.stage-steps{position:absolute;left:max(var(--m),calc((100% - var(--max)) / 2));bottom:28px;display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:var(--step-small);color:var(--muted)}
+.stage-steps li{display:flex;align-items:center;gap:8px;transition:color .3s}
+.stage-steps li::before{content:"";width:22px;height:8px;border-radius:2px;background:var(--brick-dim);transition:background-color .3s,width .4s var(--ease)}
+.stage-steps li.on{color:var(--ink)}
+.stage-steps li.on::before{background:var(--accent);width:36px}
+@media (max-width:820px){
+  .stage{height:170vh}
+  .stage-pin{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-items:start;gap:0;padding-top:24px}
+  .stage-copy{padding-top:8px}
+  .stage h1{font-size:clamp(2.4rem,9.5vw,3.6rem)}
+  .stage .hero-sub{font-size:1.0625rem;margin-top:16px}
+  .stage .hero-acts{margin-top:22px}
+  .stage .hero-acts .btn{flex:1 1 100%}
+  .stage-obj{height:auto;min-height:220px}
+  .lego{--w:clamp(120px,36vw,190px)}
+  .stage-steps{bottom:20px}
+}
+@media (max-height:640px) and (max-width:820px){.stage-obj{display:none}}
+@media (prefers-reduced-motion:reduce){.stage{height:auto}.stage-pin{position:relative;height:auto;min-height:100svh}.stage-steps{display:none}}
+
+.stats{padding-block:clamp(24px,3vw,40px) 0}
+.stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.stats li{background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);border-radius:var(--radius);padding:22px}
+.stats strong{display:block;font-weight:800;font-size:clamp(2rem,1.4rem + 1.6vw,3rem);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{display:block;margin-top:8px;color:var(--muted);font-size:var(--step-small);line-height:1.35}
+@media (max-width:760px){.stats ul{grid-template-columns:1fr 1fr}}
+.wall-band{padding-top:clamp(48px,6vw,80px)}
+
+/* ===== phone + tablet fixes ===== */
+@media (max-width:760px){.f-cols > div:first-child{grid-column:1/-1}}
+@media (max-width:380px){
+  .mark{font-size:1.15rem;gap:8px}
+  .nav-end{gap:4px}
+  .nav .btn{padding:0 12px}
+  .stage-steps{gap:10px;font-size:.8125rem}
+  .stage-steps li::before{width:14px}
+  .stage-steps li.on::before{width:22px}
+}
 </style>
 </head>
 <body class="no-js">
@@ -495,6 +576,7 @@ footer{padding-top:64px}
       <li><a href="#websites">Websites</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="/thumbnails.html">Thumbnails</a></li>
       <li class="only-phone-li"><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-end">
@@ -506,16 +588,43 @@ footer{padding-top:64px}
 </header>
 
 <main id="main">
-<section class="hero wrap" id="top" aria-labelledby="hero-h">
-  <div class="hero-copy grid">
-    <h1 id="hero-h" class="rise">I make Roblox videos and build websites for creators, businesses and shops.</h1>
-    <p class="hero-sub rise" style="--d:90ms">Fast, custom sites that look great on every phone, kept up to date by me, so you never have to touch code.</p>
-    <div class="hero-acts rise" style="--d:160ms">
-      <a class="btn btn-accent" href="#pricing">See website prices <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-quiet" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true" style="color:var(--wa)"><use href="#i-wa"/></svg>WhatsApp me</a>
+<section class="stage" id="top" aria-labelledby="hero-h">
+  <div class="stage-pin wrap">
+    <div class="stage-copy">
+      <p class="eyebrow rise"><b aria-hidden="true"></b>Taking new websites now · replies within 24 hours</p>
+      <h1 id="hero-h" class="rise" style="--d:60ms">Websites built<br> brick by brick<br> for <span class="swap" aria-hidden="true"><span class="swap-in" id="swap">creators</span></span><span class="sr-only">creators, businesses and shops</span>.</h1>
+      <p class="hero-sub rise" style="--d:120ms">Fast, custom sites that look right on every phone. I build them, then keep them updated, so you never touch code. I also make Roblox videos.</p>
+      <div class="hero-acts rise" style="--d:180ms">
+        <a class="btn btn-accent btn-big" href="#pricing">See website prices <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>or WhatsApp me</a>
+      </div>
     </div>
-    <p class="status"><b aria-hidden="true"></b>Taking new websites now · replies within 24 hours</p>
+    <div class="stage-obj" aria-hidden="true">
+      <div class="glow"></div>
+      <div class="lego" id="lego">
+        <div class="lf front"><span id="lego-letter">N</span></div>
+        <div class="lf back"><span>N</span></div>
+        <div class="lf right"></div>
+        <div class="lf left"></div>
+        <div class="lf top"><i></i><i></i><i></i><i></i></div>
+        <div class="lf bottom"></div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+    <ol class="stage-steps" aria-hidden="true"><li class="on">Creators</li><li>Businesses</li><li>Shops</li></ol>
   </div>
+</section>
+
+<section class="stats wrap" aria-label="Quick facts">
+  <ul>
+    <li class="rise"><strong>2</strong><span>sites live, one for a paying client</span></li>
+    <li class="rise" style="--d:60ms"><strong data-count="tiktok">5,129</strong><span>TikTok followers</span></li>
+    <li class="rise" style="--d:120ms"><strong data-usd="12" data-suffix="/mo"></strong><span>to start, upkeep included</span></li>
+    <li class="rise" style="--d:180ms"><strong>24h</strong><span>reply time</span></li>
+  </ul>
+</section>
+
+<section class="wall-band wrap" aria-label="Brick wall">
   <div class="wall">
     <ul class="bricks" aria-label="N-S-H-I-N-J-I. Tap a brick.">
       <li style="display:contents"><button class="brick" type="button" aria-label="Brick N">N</button></li>
@@ -741,12 +850,12 @@ footer{padding-top:64px}
   <div class="f-cols">
     <div><h4>Contact</h4><ul><li><a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></li><li><a href="tel:+447865606629">+44 7865 606629</a></li></ul>
       <a class="f-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a></div>
-    <div><h4>On this site</h4><ul><li><a href="#socials">Socials</a></li><li><a href="#websites">Websites</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div><h4>On this site</h4><ul><li><a href="#socials">Socials</a></li><li><a href="#websites">Websites</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li><a href="/thumbnails.html">Thumbnails</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     <div><h4>Work</h4><ul><li><a href="https://sg0hann.online" target="_blank" rel="noopener">sg0hann.online</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
   </div>
   <svg class="f-word" viewBox="0 0 1000 178" role="img" aria-label="nshinji"><text x="-6" y="168" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="226" letter-spacing="-9" textLength="1008" lengthAdjust="spacingAndGlyphs" fill="currentColor">NSHINJI</text></svg>
-  <div class="legal"><span>© nshinji · UK</span><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
+  <div class="legal"><span>© nshinji · UK</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
 </footer>
 
 <a class="float-wa" id="float-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener" aria-label="Message nshinji on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
@@ -1035,7 +1144,7 @@ const rootEl = document.documentElement, tBtn = document.getElementById('theme')
 const sysDark = matchMedia('(prefers-color-scheme: dark)');
 const C = window.nshinjiConsent, canSave = ()=> ['all','required'].includes(C.get());
 let saved = null; try{ if(canSave()) saved = localStorage.getItem('nshinji-theme'); else if(C.get()==='none') localStorage.removeItem('nshinji-theme'); }catch(_){}
-const isDark = ()=> rootEl.dataset.theme ? rootEl.dataset.theme==='dark' : sysDark.matches;
+const isDark = ()=> rootEl.dataset.theme ? rootEl.dataset.theme==='dark' : true;
 function paintTheme(){
   const d = isDark();
   document.getElementById('root') ? document.getElementById('root').classList.toggle('is-dark',d) : document.body.classList.toggle('is-dark',d);
@@ -1127,6 +1236,39 @@ paintTheme();
   document.addEventListener('visibilitychange', tick);
   C.on(c => c === 'all' ? start() : stop());
   C.get() === 'all' ? start() : offLabel();
+})();
+</script>
+<script>
+// scroll stage: brick turns with scroll, headline word swaps per third
+(()=>{
+  const stage=document.querySelector('.stage'), lego=document.getElementById('lego'), sw=document.getElementById('swap');
+  if(!stage||!lego) return;
+  const steps=[...document.querySelectorAll('.stage-steps li')], WORDS=['creators','businesses','shops'];
+  const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur=0, mx=0, my=0, raf=0, t0=performance.now();
+  function setWord(i){
+    if(i===cur) return; cur=i;
+    steps.forEach((s,k)=>s.classList.toggle('on',k===i));
+    if(RM){ sw.textContent=WORDS[i]; return; }
+    sw.classList.remove('in'); sw.classList.add('out');
+    setTimeout(()=>{ sw.textContent=WORDS[cur]; sw.classList.remove('out'); void sw.offsetWidth; sw.classList.add('in'); },200);
+  }
+  function frame(now){
+    raf=0;
+    const r=stage.getBoundingClientRect(), span=Math.max(1,stage.offsetHeight-innerHeight);
+    const p=Math.min(1,Math.max(0,-r.top/span));
+    const bob=RM?0:Math.sin((now-t0)/900)*8;
+    lego.style.setProperty('--ry',(-32+p*360+mx*14)+'deg');
+    lego.style.setProperty('--rx',(-22+Math.sin(p*Math.PI)*-14+my*-10)+'deg');
+    lego.style.setProperty('--y',bob+'px');
+    setWord(Math.min(2,Math.floor(p*3.0001)));
+    if(!RM && r.bottom>0 && r.top<innerHeight) raf=requestAnimationFrame(frame);
+  }
+  const kick=()=>{ if(!raf) raf=requestAnimationFrame(frame); };
+  addEventListener('scroll',kick,{passive:true});
+  addEventListener('resize',kick);
+  if(matchMedia('(hover:hover)').matches) addEventListener('pointermove',e=>{ mx=e.clientX/innerWidth-.5; my=e.clientY/innerHeight-.5; kick(); },{passive:true});
+  kick();
 })();
 </script>
 </body>
