@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co https://abacus.jasoncameron.dev; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Website Design in Porthcawl &amp; South Wales from £12/month | nshinji</title>
+<title>Website Design for Small Businesses in Porthcawl &amp; South Wales | from £12/month | nshinji</title>
 <meta name="description" content="Affordable websites for small businesses, shops and creators in Porthcawl, Bridgend and across South Wales and the UK. Hosting and updates included, from £12 a month. Free quote within 24 hours.">
 <link rel="canonical" href="https://nshinjiportfolio.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -39,7 +39,7 @@
   "sameAs": ["https://www.youtube.com/@nshinjiiii", "https://www.tiktok.com/@nshinjii", "https://www.instagram.com/nshinjiii", "https://nshinjimedia.co.uk"],
   "makesOffer": [
     {"@type": "Offer", "name": "Business website, Starter", "priceCurrency": "GBP", "price": "12", "description": "One-page business website with hosting and upkeep, per month"},
-    {"@type": "Offer", "name": "Business website, Creator", "priceCurrency": "GBP", "price": "23", "description": "Up to 5 pages with your own domain and basic SEO, per month"}
+    {"@type": "Offer", "name": "Business website, Business plan", "priceCurrency": "GBP", "price": "23", "description": "Up to 5 pages with your own domain and basic SEO, per month"}
   ]
 }
 </script>
@@ -572,6 +572,102 @@ footer{padding-top:64px}
   .nav-end{gap:4px}
   .nav .btn{padding:0 12px}
 }
+
+/* ===== v3: obvious, sales-first ===== */
+.nav-tel{font-weight:500;color:var(--ink);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;padding:0 8px;white-space:nowrap}
+.nav-tel:hover{color:var(--accent-text)}
+@media (max-width:1060px){.nav-tel{display:none}}
+.nav-cta{white-space:nowrap}.nav-cta .less{display:none}
+@media (max-width:560px){.nav-cta .more{display:none}.nav-cta .less{display:inline}}
+
+.hero3{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;padding-top:clamp(36px,5vw,80px);padding-bottom:clamp(32px,4vw,56px)}
+.hero3::before{content:"";position:absolute;z-index:-1;inset:-80px 0 auto;height:640px;background:radial-gradient(50% 60% at 80% 35%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 70%);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:var(--step-small);padding:6px 12px 6px 10px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.eyebrow b{width:9px;height:9px;border-radius:50%;background:#3ddc84;flex:none}
+.hero3 h1{margin-top:20px;font-size:clamp(2.3rem,1.1rem + 3.8vw,4.25rem);line-height:.98;letter-spacing:-.045em;text-wrap:balance}
+.h3-price{margin-top:18px;font-size:clamp(1.25rem,1rem + .9vw,1.75rem);line-height:1.25;color:var(--muted);max-width:26ch}
+.h3-price strong{color:var(--accent-text);font-weight:800}
+.hero3 .hero-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn-big{min-height:58px;padding:0 26px;font-size:1.125rem}
+.wa-btn{background:#25d366;color:#04140a}
+.wa-btn svg{width:20px;height:20px}
+.trust{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
+.trust li{display:flex;gap:10px;align-items:flex-start;line-height:1.35}
+.trust li::before{content:"";flex:none;width:18px;height:18px;margin-top:2px;border-radius:5px;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.h3-shot{display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 30px 80px -30px color-mix(in srgb,var(--accent) 60%,transparent);transform:rotate(1.2deg);transition:transform .4s var(--ease)}
+.h3-shot:hover{transform:rotate(0) translateY(-4px)}
+.h3-shot .bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:var(--surface-2)}
+.h3-shot .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.h3-shot .bar em{font-style:normal;font-size:.8125rem;color:var(--muted);margin-left:10px;padding:3px 10px;border-radius:999px;background:var(--bg)}
+.h3-shot img{width:100%;height:auto;display:block}
+.h3-cap{display:block;padding:12px 14px;font-size:var(--step-small);color:var(--muted)}
+@media (max-width:900px){
+  .hero3{grid-template-columns:1fr}
+  .hero3 .hero-acts .btn{flex:1 1 200px}
+  .h3-shot{transform:none}
+}
+@media (max-width:420px){.trust{grid-template-columns:1fr}}
+
+.s-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 32px;margin-bottom:28px}
+.s-head .lead{max-width:40ch}
+.sec{padding-block:clamp(48px,6vw,88px) 0}
+
+.work3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.work3 a{display:flex;flex-direction:column;height:100%;text-decoration:none;color:inherit;background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);border-radius:var(--radius);overflow:hidden;transition:transform .3s var(--ease),border-color .3s}
+.work3 a:hover{transform:translateY(-4px);border-color:var(--accent)}
+.work3 img{width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;object-position:top;display:block}
+.w-meta{display:flex;flex-direction:column;gap:4px;padding:16px 18px 18px}
+.w-meta b{font-weight:800;font-size:1.125rem;letter-spacing:-.01em}
+.w-next a{background:color-mix(in srgb,var(--accent) 16%,var(--surface));border:2px dashed color-mix(in srgb,var(--accent) 60%,transparent)}
+.w-plus{display:grid;place-items:center;aspect-ratio:8/5;font-size:4rem;font-weight:800;color:var(--accent-text)}
+@media (max-width:900px){.work3{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.work3{grid-template-columns:1fr}.w-plus{aspect-ratio:auto;padding-top:18px;font-size:2.5rem;justify-items:start;padding-left:18px}}
+
+.pricing .seg.pay{margin-bottom:20px}
+.pricing .seg.pay button{white-space:nowrap}
+.pricing .plans{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:901px){.pricing .jump{display:none}}
+.other-plans{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;padding:18px 20px;border-radius:var(--radius);background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
+.other-plans p{color:var(--muted);flex:1 1 280px;line-height:1.4}
+.other-plans b{color:var(--ink)}
+.extras3{margin-top:12px;border-radius:var(--radius);background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);padding:0 20px}
+.extras3 > summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:60px;font-weight:500}
+.extras3 > summary::-webkit-details-marker{display:none}
+.extras3 > summary i{position:relative;width:24px;height:24px}
+.extras3 > summary i::before,.extras3 > summary i::after{content:"";position:absolute;left:5px;right:5px;top:11px;height:2px;background:currentColor;transition:transform .3s}
+.extras3 > summary i::after{transform:rotate(90deg)}
+.extras3[open] > summary i::after{transform:none}
+.extras3 .addons{padding-bottom:16px}
+.extras3 .addons b{white-space:nowrap}
+
+.steps3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:s}
+.steps3 li{background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);border-radius:var(--radius);padding:24px;counter-increment:s}
+.steps3 li::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:1.25rem;margin-bottom:16px}
+.steps3 b{display:block;font-size:1.25rem;font-weight:800;letter-spacing:-.015em}
+.steps3 p{margin-top:8px;color:var(--muted);line-height:1.45}
+@media (max-width:760px){.steps3{grid-template-columns:1fr}}
+.faq3{max-width:860px}
+
+#contact .f label .muted{font-weight:400}
+#contact .c-line a{color:inherit}
+#contact{margin-top:clamp(48px,6vw,88px)}
+
+.foot3{padding-block:40px calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);margin-top:0;display:grid;gap:18px;background:none;color:var(--ink)}
+.foot3-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
+.foot3 a{color:var(--ink);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.foot3 a:hover{color:var(--accent-text)}
+.foot3-legal{font-size:var(--step-small)}
+.foot3-legal a{color:var(--muted)}
+
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{position:fixed;z-index:60;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .3s var(--ease)}
+  .mbar .btn{min-height:52px}
+  .mbar .btn-accent{flex:1}
+  .mbar .wa-btn{width:56px;padding:0;justify-content:center}
+  .mbar.hide{transform:translateY(110%)}
+  body{padding-bottom:76px}
+}
 </style>
 </head>
 <body class="no-js">
@@ -584,203 +680,133 @@ footer{padding-top:64px}
 
 <header class="wrap">
   <nav class="nav" aria-label="Main">
-    <a class="mark" href="#top" aria-label="nshinji, back to top"><i aria-hidden="true">N</i>nshinji</a>
+    <a class="mark" href="#top" aria-label="nshinji web design, back to top"><i aria-hidden="true">N</i>nshinji</a>
     <ul id="nav-links">
+      <li><a href="#work">Examples</a></li>
       <li><a href="#pricing">Prices</a></li>
       <li><a href="#how">How it works</a></li>
-      <li><a href="#websites">Examples</a></li>
       <li><a href="#faq">Questions</a></li>
-      <li><a href="/thumbnails.html">Thumbnails</a></li>
-      <li class="only-phone-li"><a href="#contact">Get a quote</a></li>
+      <li class="only-phone-li"><a href="#contact">Get a free quote</a></li>
     </ul>
     <div class="nav-end">
+      <a class="nav-tel" href="tel:+447865606629">07865 606629</a>
       <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
-      <button class="theme" id="theme" type="button" aria-label="Switch to light mode"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z" fill="currentColor"/></svg></button>
       <a class="btn btn-accent nav-cta" href="#contact"><span class="more">Get a free quote</span><span class="less">Quote</span></a>
     </div>
   </nav>
 </header>
 
 <main id="main">
-<section class="hero2 wrap" id="top" aria-labelledby="hero-h">
-  <div class="h2-copy">
+<section class="hero3 wrap" id="top" aria-labelledby="hero-h">
+  <div class="h3-copy">
     <p class="eyebrow"><b aria-hidden="true"></b>Taking new clients · reply within 24 hours</p>
-    <h1 id="hero-h">I build websites for small businesses. <span>From <span data-usd="15"></span> a month.</span></h1>
-    <p class="hero-sub">You get a website that works on every phone, shows up on Google and gets you calls. I build it, host it and keep it updated, so you never touch code.</p>
+    <h1 id="hero-h">Websites for small businesses in South Wales.</h1>
+    <p class="h3-price">From <strong>£12 a month</strong>. Built, hosted and looked after for you.</p>
     <div class="hero-acts">
       <a class="btn btn-accent btn-big" href="#contact">Get a free quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-quiet btn-big" href="#pricing">See prices</a>
+      <a class="btn wa-btn btn-big" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
     </div>
-    <a class="wa hero-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Or WhatsApp me: +44 7865 606629</a>
-  </div>
-  <aside class="h2-card" aria-label="What every website includes">
-    <p class="h2-card-top"><span class="stack" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Every website includes</p>
-    <ul class="ticks">
-      <li>Looks right on phones, tablets and laptops</li>
-      <li>Call, WhatsApp and email buttons</li>
-      <li>Set up so Google can find you</li>
-      <li>Hosting, fixes and updates, done for you</li>
+    <ul class="trust">
+      <li>Fixed price before you pay anything</li>
+      <li>Works on every phone</li>
+      <li>Set up to be found on Google</li>
       <li>Your domain, in your name</li>
-      <li>A quote before any work starts</li>
     </ul>
-    <p class="h2-card-foot">Based in Porthcawl, South Wales. Working with businesses anywhere in the UK.</p>
-  </aside>
+  </div>
+  <a class="h3-shot" href="https://sg0hann.online" target="_blank" rel="noopener" aria-label="See sg0hann.online, a site I built for a client">
+    <span class="bar" aria-hidden="true"><i></i><i></i><i></i><em>sg0hann.online</em></span>
+    <img src="/img/work-sg0hann.jpg" width="800" height="500" alt="Homepage of sg0hann.online, a dark website with a featured video, built for a client" fetchpriority="high">
+    <span class="h3-cap">Built for a paying client · click to see it live</span>
+  </a>
 </section>
 
-<section class="stats wrap" aria-label="Quick facts">
-  <ul>
-    <li><strong data-usd="15"></strong><span>a month for a business site, upkeep included</span></li>
-    <li><strong>2–4 days</strong><span>for a one-page site</span></li>
-    <li><strong>24h</strong><span>reply time</span></li>
-    <li><strong>2</strong><span>sites live, one for a paying client</span></li>
+<section class="sec wrap" id="work" aria-labelledby="work-h">
+  <div class="s-head">
+    <h2 class="h2" id="work-h">Sites I've built</h2>
+    <p class="lead muted">Real, live websites. Click to have a look.</p>
+  </div>
+  <ul class="work3">
+    <li><a href="https://sg0hann.online" target="_blank" rel="noopener">
+      <img src="/img/work-sg0hann.jpg" width="800" height="500" loading="lazy" alt="sg0hann.online homepage">
+      <span class="w-meta"><b>sg0hann.online</b><span class="muted">Paying client · video creator's official site</span></span>
+    </a></li>
+    <li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">
+      <img src="/img/work-nshinjimedia.jpg" width="800" height="500" loading="lazy" alt="nshinjimedia.co.uk homepage">
+      <span class="w-meta"><b>nshinjimedia.co.uk</b><span class="muted">My own channel site</span></span>
+    </a></li>
+    <li class="w-next"><a href="#contact">
+      <span class="w-plus" aria-hidden="true">+</span>
+      <span class="w-meta"><b>Your business next</b><span>Tell me what you do and I'll send a price within 24 hours.</span></span>
+    </a></li>
   </ul>
 </section>
 
-<section class="sec wrap" id="how" aria-labelledby="how-h">
-  <h2 class="h2 rise" id="how-h">How it works</h2>
-  <ol class="steps3">
-    <li class="rise"><b>Tell me what you need</b><p>Fill in the quote form or WhatsApp me. A couple of lines is enough.</p></li>
-    <li class="rise" style="--d:60ms"><b>Get your price</b><p>I reply within 24 hours with a fixed price. No surprises later.</p></li>
-    <li class="rise" style="--d:120ms"><b>Send your stuff</b><p>Your logo, photos, prices and opening hours. I can write the text for you.</p></li>
-    <li class="rise" style="--d:180ms"><b>Your site goes live</b><p>You check it, ask for changes, then it goes live. I keep it updated after.</p></li>
-  </ol>
-  <p class="how-cta rise"><a class="btn btn-accent" href="#contact">Start with a free quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-</section>
-
-<section class="sec wrap pricing" id="pricing" aria-labelledby="price-h" style="padding-top:0">
-  <div class="p-head rise">
-    <h2 class="h2" id="price-h">Prices</h2>
-    <p class="lead muted">Every plan includes hosting, fixes and updates. Pay monthly, or pay once for the year and save.</p>
+<section class="sec wrap pricing" id="pricing" aria-labelledby="price-h">
+  <div class="s-head">
+    <h2 class="h2" id="price-h">Simple prices</h2>
+    <p class="lead muted">Hosting, fixes and updates are always included. Pay monthly, or pay once for the year and save.</p>
   </div>
-
-  <div class="plan-zone">
-  <div class="controls" role="group" aria-label="Pricing options">
-    <div class="ctl"><span class="ctl-l">What's it for?</span>
-    <div class="seg type" role="group" aria-label="Type of site">
-      <span class="thumb" aria-hidden="true"></span>
-      <button type="button" data-type="business" aria-pressed="true">Business</button>
-      <button type="button" data-type="shop" aria-pressed="false">Shop</button>
-      <button type="button" data-type="content" aria-pressed="false">Creator</button>
-    </div></div>
-    <div class="ctl"><span class="ctl-l">How do you want to pay?</span>
-    <div class="seg pay" role="group" aria-label="How you pay">
-      <span class="thumb" aria-hidden="true"></span>
-      <button type="button" data-pay="monthly" aria-pressed="true">Monthly</button>
-      <button type="button" data-pay="once" aria-pressed="false">Pay once</button>
-    </div></div>
-    <div class="ctl cur-ctl"><span class="ctl-l">Currency</span>
-    <div class="seg cur" role="group" aria-label="Currency">
-      <span class="thumb" aria-hidden="true"></span>
-      <button type="button" data-cur="gbp" aria-pressed="true" aria-label="Pounds sterling">£</button>
-      <button type="button" data-cur="usd" aria-pressed="false" aria-label="US dollars">$</button>
-    </div></div>
+  <div class="seg pay" role="group" aria-label="How you pay">
+    <span class="thumb" aria-hidden="true"></span>
+    <button type="button" data-pay="monthly" aria-pressed="true">Pay monthly</button>
+    <button type="button" data-pay="once" aria-pressed="false">Pay once a year</button>
   </div>
 
   <ul class="plans" id="plans" aria-live="polite"></ul>
   <div class="jump" role="group" aria-label="Jump to plan">
-    <button type="button" data-jump="0">Starter</button><button type="button" data-jump="1">Creator</button><button type="button" data-jump="2">Pro</button><button type="button" data-jump="3">Custom</button>
-  </div>
-  </div>
-
-  <div class="diy rise" id="ready-made" aria-labelledby="diy-h">
-    <div class="diy-price">
-      <span class="diy-tile" data-usd="15" aria-hidden="true"></span>
-      <p class="muted">One&#8209;off price. No monthly fees.</p>
-    </div>
-    <div>
-      <h3 id="diy-h">Just want the code?</h3>
-      <p class="lead muted">Get one of my ready-made website designs as a single HTML file for <strong style="color:var(--ink)" data-usd="15"></strong>. Swap in your own text, photos and links, then host it yourself.</p>
-      <div class="diy-acts">
-        <button class="btn btn-accent" type="button" id="diy-btn">Get a ready-made site</button>
-      </div>
-      <p class="diy-note small muted">You set it up and edit it yourself, so upkeep isn't included.</p>
-    </div>
+    <button type="button" data-jump="0">Starter</button><button type="button" data-jump="1">Business</button><button type="button" data-jump="2">Pro</button>
   </div>
 
-  <div class="after">
-    <div class="grid after-row rise">
-      <h3>What upkeep includes</h3>
-      <div class="body">
-        <ul class="upkeep">
-          <li>Small text and photo updates</li>
-          <li>New products, prices or opening hours added</li>
-          <li>Bug and broken-link fixes</li>
-          <li>Hosting: kept online, fast and secure</li>
-        </ul>
-        <div class="hours" aria-label="Change time per month">
-          <div><b>1 hr</b><span class="muted small">a month on Starter</span></div>
-          <div><b>2 hrs</b><span class="muted small">a month on Creator</span></div>
-          <div><b>4 hrs</b><span class="muted small">a month on Pro</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="grid after-row rise">
-      <h3>Extras</h3>
-      <div class="body faq">
-        <details class="extras"><summary>See add-ons and upkeep upgrades<i aria-hidden="true"></i></summary>
-        <ul class="addons">
-          <li><span>Extra page</span><b data-usd="25"></b></li>
-          <li><span>Simple logo</span><b data-usd="40"></b></li>
-          <li><span>Extra 10 products</span><b data-usd="20"></b></li>
-          <li><span>I write the text for you</span><b data-usd="30" data-suffix="/page"></b></li>
-          <li><span>Extra revision</span><b data-usd="20"></b></li>
-          <li><span>Rush delivery</span><b>+30% of build</b></li>
-          <li><span>Move an existing site</span><b data-usd="60" data-prefix="from "></b></li>
-          <li><span>Priority Care: faster replies, double change hours</span><b data-care="15,150"></b></li>
-          <li><span>Growth Care: Priority, plus a new page every quarter and a monthly visitor report</span><b data-care="35,350"></b></li>
-        </ul>
-        <p class="handover muted">Leaving upkeep? Take your site files any time for a one-time <span data-usd="99"></span> handover fee.</p>
-        </details>
-      </div>
-    </div>
+  <div class="other-plans">
+    <p><b>Selling online?</b> Shop plans start at £15 a month with products, checkout and order emails.</p>
+    <p><b>Something bigger?</b> Custom sites with bookings, logins or lots of pages start at £1,200.</p>
+    <a class="link-arrow" href="#contact">Ask for a quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
+
+  <details class="extras3">
+    <summary>Extras and add-ons<i aria-hidden="true"></i></summary>
+    <ul class="addons">
+      <li><span>Extra page</span><b>£20</b></li>
+      <li><span>Simple logo</span><b>£32</b></li>
+      <li><span>I write the text for you</span><b>£24/page</b></li>
+      <li><span>Extra revision</span><b>£16</b></li>
+      <li><span>Rush delivery</span><b>+30% of build</b></li>
+      <li><span>Move your existing site over</span><b>from £48</b></li>
+      <li><span>Priority Care: faster replies, double change hours</span><b>+£12/mo</b></li>
+      <li><span>Leaving upkeep? Take your site files</span><b>£79 one-off</b></li>
+    </ul>
+  </details>
 </section>
 
-<section class="sec wrap" id="websites" aria-labelledby="work-h" style="padding-top:0">
-  <div class="work-head rise">
-    <h2 class="h2" id="work-h">Sites I've built</h2>
-    <p class="lead muted">Click to see them live.</p>
-  </div>
-  <ul class="projects">
-    <li class="rise"><a class="proj" href="https://sg0hann.online" target="_blank" rel="noopener">
-      <h3>sg0hann.online</h3>
-      <div class="meta"><b>Paying client · SG0HANN, Fortnite creator</b><span class="muted">His official hub for videos, maps and community.</span><span class="go">Visit site <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
-    </a></li>
-    <li class="rise" style="--d:70ms"><a class="proj" href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">
-      <h3>nshinjimedia.co.uk</h3>
-      <div class="meta"><b>My own site · nshinji media</b><span class="muted">Home for my YouTube channel and socials.</span><span class="go">Visit site <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
-    </a></li>
-    <li class="rise" style="--d:140ms"><a class="proj next" href="#contact">
-      <h3>Your business</h3>
-      <div class="meta"><b>Next up</b><span>Tell me about your business and I'll send a price within 24 hours.</span><span class="go">Get a free quote <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
-    </a></li>
-  </ul>
+<section class="sec wrap" id="how" aria-labelledby="how-h">
+  <div class="s-head"><h2 class="h2" id="how-h">How it works</h2></div>
+  <ol class="steps3">
+    <li><b>Tell me about your business</b><p>Fill in the quick form or WhatsApp me. A couple of lines is enough.</p></li>
+    <li><b>Get a fixed price</b><p>I reply within 24 hours. You don't pay anything until you say yes.</p></li>
+    <li><b>Your site goes live</b><p>Send your logo and photos. I build it, you check it, it goes live. I keep it updated after.</p></li>
+  </ol>
 </section>
 
-<section class="sec wrap" id="faq" aria-labelledby="faq-h" style="padding-top:0">
-  <div class="grid after-row rise" style="border-top:1px solid var(--line)">
-    <h2 class="h2" id="faq-h">Questions</h2>
-    <div class="body faq">
-      <details><summary>Who are you?<i aria-hidden="true"></i></summary><p class="ans">I'm nshinji, a web designer and content creator from Porthcawl in South Wales. I build sites for small businesses and creators, and I keep looking after them once they're live.</p></details>
-      <details><summary>Will I know the price first?<i aria-hidden="true"></i></summary><p class="ans">Always. You get a fixed quote before any work starts.</p></details>
-      <details><summary>How does monthly work?<i aria-hidden="true"></i></summary><p class="ans">A small setup fee to start, then the monthly price. There's a 12-month minimum, then it's month to month. Cancelling early means paying the remaining months.</p></details>
-      <details><summary>How does pay once work?<i aria-hidden="true"></i></summary><p class="ans">One payment covers the build and 12 months of upkeep. Starter is paid up front. Creator and Pro are 50% to start and 50% before launch. After the first year, renew upkeep yearly or switch to monthly.</p></details>
-      <details><summary>Will people find me on Google?<i aria-hidden="true"></i></summary><p class="ans">Every site is set up with proper page titles, descriptions and a sitemap so Google can read it. Business plans from Creator up include basic SEO, and Pro includes help with your Google Business profile.</p></details>
-      <details><summary>Who owns the domain?<i aria-hidden="true"></i></summary><p class="ans">You do. Domains cost about <span data-range="10,20"></span> a year and stay in your name. I set everything up.</p></details>
-      <details><summary>When does the clock start?<i aria-hidden="true"></i></summary><p class="ans">Delivery times start once I have your text, photos and logo.</p></details>
-      <details><summary>Can I upgrade later?<i aria-hidden="true"></i></summary><p class="ans">Yes, any time. You only pay the difference.</p></details>
-    </div>
+<section class="sec wrap" id="faq" aria-labelledby="faq-h">
+  <div class="s-head"><h2 class="h2" id="faq-h">Questions</h2></div>
+  <div class="faq faq3">
+    <details><summary>Who are you?<i aria-hidden="true"></i></summary><p class="ans">I'm nshinji, a web designer from Porthcawl. I build websites for small businesses and creators, and I keep looking after them once they're live, so you've always got someone to message.</p></details>
+    <details><summary>How fast can my site be live?<i aria-hidden="true"></i></summary><p class="ans">A one-page Starter site is usually ready in about 3 days, and a Business site in about 10, once I have your logo, photos and details.</p></details>
+    <details><summary>What do I need to give you?<i aria-hidden="true"></i></summary><p class="ans">Your logo if you have one, a few photos, your services and prices, and your opening hours. No logo or text? I can make those for you as an add-on.</p></details>
+    <details><summary>How does monthly work?<i aria-hidden="true"></i></summary><p class="ans">A one-off setup fee, then the monthly price. There's a 12-month minimum, then it's month to month.</p></details>
+    <details><summary>Will people find me on Google?<i aria-hidden="true"></i></summary><p class="ans">Every site gets proper page titles, descriptions and a sitemap so Google can read it. Business and Pro include local SEO, and Pro includes help with your Google Business profile.</p></details>
+    <details><summary>Who owns the website address?<i aria-hidden="true"></i></summary><p class="ans">You do. A domain costs about £8–£16 a year, stays in your name, and I set it all up.</p></details>
   </div>
 </section>
 
 <section class="sec wrap contact" id="contact" aria-labelledby="contact-h">
   <div class="grid">
-    <div class="c-left rise">
-      <h2 id="contact-h">Get a free quote.</h2>
-      <p class="lead muted">Tell me about your business. I'll reply within 24 hours with a fixed price. No payment until you say yes.</p>
+    <div class="c-left">
+      <h2 id="contact-h">Get your free quote.</h2>
+      <p class="lead muted">Tell me about your business. You'll get a fixed price within 24 hours. No payment until you say yes.</p>
       <div class="c-acts">
         <a class="btn wa-btn" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
-        <a class="btn btn-quiet" href="tel:+447865606629">Call +44 7865 606629</a>
+        <a class="btn btn-quiet" href="tel:+447865606629">Call 07865 606629</a>
       </div>
       <p class="c-line muted">Or email <a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></p>
     </div>
@@ -792,13 +818,11 @@ footer{padding-top:64px}
       <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="err" id="email-err"></p></div>
       <div class="f"><label for="phone">Phone or WhatsApp <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
       <div class="f"><label for="biz">Business name <span class="muted">(optional)</span></label><input id="biz" name="business" autocomplete="organization"></div>
-      <div class="f"><label for="type">What do you need?</label>
-        <select id="type" name="type"><option>Business website</option><option value="Online shop">Online shop</option><option value="Creator website">Creator website</option><option value="Ready-made HTML">Ready-made HTML file</option><option value="Not sure">Not sure yet</option></select></div>
-      <div class="f"><label for="pack">Plan</label>
-        <select id="pack" name="pack"><option>Not sure</option><option>Starter</option><option>Creator</option><option>Pro</option><option>Custom</option></select></div>
+      <div class="f full"><label for="pack">Plan</label>
+        <select id="pack" name="pack"><option>Not sure yet</option><option>Starter</option><option>Business</option><option>Pro</option><option>Online shop</option><option>Custom</option></select></div>
       <input type="hidden" id="pay" name="payment" value="">
-      <div class="f full"><label for="msg">Tell me about it</label><textarea id="msg" name="message" required aria-describedby="msg-err" placeholder="What does your business do? Do you have a website now? Anything you'd like on it?"></textarea><p class="err" id="msg-err"></p></div>
-      <div class="submit-row"><button class="btn btn-accent btn-big" type="submit">Send and get my quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="muted small">Free, and no obligation.</span></div>
+      <div class="f full"><label for="msg">Tell me about it</label><textarea id="msg" name="message" required aria-describedby="msg-err" placeholder="What does your business do? Do you have a website now?"></textarea><p class="err" id="msg-err"></p></div>
+      <div class="submit-row"><button class="btn btn-accent btn-big" type="submit">Send and get my quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="muted small">Free, no obligation.</span></div>
     </form>
     <div class="done" id="done" hidden tabindex="-1">
       <h3>Thanks, got it. I'll reply within 24 hours.</h3>
@@ -809,290 +833,135 @@ footer{padding-top:64px}
 </section>
 </main>
 
-<footer class="wrap" id="footer">
-  <div class="f-cols">
-    <div><h4>Contact</h4><ul><li><a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></li><li><a href="tel:+447865606629">+44 7865 606629</a></li><li>Porthcawl, South Wales, UK</li></ul>
-      <a class="f-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a></div>
-    <div><h4>Websites</h4><ul><li><a href="#pricing">Prices</a></li><li><a href="#how">How it works</a></li><li><a href="#websites">Examples</a></li><li><a href="#contact">Get a quote</a></li></ul></div>
-    <div><h4>Also</h4><ul><li><a href="/thumbnails.html">Thumbnails</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
-    <div><h4>Follow</h4><ul><li><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+<footer class="wrap foot3" id="footer">
+  <div class="foot3-row">
+    <a class="mark" href="#top"><i aria-hidden="true">N</i>nshinji</a>
+    <p class="muted">Web design · Porthcawl, South Wales</p>
   </div>
-  <svg class="f-word" viewBox="0 0 1000 178" role="img" aria-label="nshinji"><text x="-6" y="168" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="226" letter-spacing="-9" textLength="1008" lengthAdjust="spacingAndGlyphs" fill="currentColor">NSHINJI</text></svg>
-  <div class="legal"><span>© nshinji · Web design, Porthcawl, UK</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><button class="ck-link" type="button" data-ck-open>Cookie settings</button></div>
+  <div class="foot3-row foot3-links">
+    <a href="tel:+447865606629">07865 606629</a>
+    <a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a>
+    <a href="https://wa.me/447865606629" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="/thumbnails.html">Also: YouTube thumbnails</a>
+  </div>
+  <div class="foot3-row foot3-legal muted"><span>© nshinji</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
 </footer>
 
-<a class="float-wa" id="float-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener" aria-label="Message nshinji on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<div class="mbar" id="mbar">
+  <a class="btn btn-accent" href="#contact">Get a free quote</a>
+  <a class="btn wa-btn" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener" aria-label="WhatsApp me"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+</div>
 
-<section class="ck" id="ck" hidden tabindex="-1" aria-labelledby="ck-h">
-  <h2 id="ck-h">Cookies on this site</h2>
-  <p>Pick what this site may save in your browser. You can change it any time from Cookie settings at the bottom of the page.</p>
-  <ul>
-    <li><b>Required:</b> remembers your cookie choice and your light or dark mode.</li>
-  </ul>
-  <div class="ck-acts">
-    <button class="ck-btn" type="button" data-ck="all">Accept all</button>
-    <button class="ck-btn" type="button" data-ck="required">Required only</button>
-    <button class="ck-btn" type="button" data-ck="none">Reject all</button>
-  </div>
-</section>
-<script>
-// cookie choice: 'all', 'required' or 'none'. 'none' is only kept for this visit, so the banner asks again next time.
-(()=>{
-  const KEY='nshinji-consent', OK=['all','required','none'], bar=document.getElementById('ck'), subs=[];
-  let choice=null, returnTo=null;
-  try{ choice=localStorage.getItem(KEY)||sessionStorage.getItem(KEY); }catch(_){}
-  if(!OK.includes(choice)) choice=null;
-  function mark(){ bar.querySelectorAll('[data-ck]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ck===choice))); }
-  function set(c){
-    if(!OK.includes(c)) return;
-    choice=c;
-    try{ localStorage.removeItem(KEY); sessionStorage.removeItem(KEY); (c==='none'?sessionStorage:localStorage).setItem(KEY,c); }catch(_){}
-    bar.hidden=true;
-    subs.forEach(f=>{ try{ f(c); }catch(_){} });
-  }
-  function hide(){ bar.hidden=true; if(returnTo){ returnTo.focus(); returnTo=null; } }
-  function show(focus){ mark(); bar.hidden=false; if(focus) bar.focus(); }
-  bar.addEventListener('click',e=>{ const b=e.target.closest('[data-ck]'); if(b){ set(b.dataset.ck); hide(); } });
-  bar.addEventListener('keydown',e=>{ if(e.key==='Escape' && choice){ hide(); } });
-  document.addEventListener('click',e=>{ const o=e.target.closest('[data-ck-open]'); if(o){ e.preventDefault(); returnTo=o; show(true); } });
-  window.nshinjiConsent={ get:()=>choice, set, on:f=>subs.push(f) };
-})();
-</script>
 <script>
 document.body.classList.remove('no-js');
 (()=>{
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const WA = 'https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website';
-// Paste the endpoint the current form posts to (e.g. Formspree/Web3Forms). Empty = opens an email to you instead.
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/nshinjicontact@protonmail.com';
 
+// ===== Prices (GBP). Edit here. =====
 const PLANS = [
- {id:'starter', name:'Starter', size:'One page', bricks:1, hrs:1,
-  content:{setup:19,mo:12,once:149,renew:99,who:'For YouTubers, TikTokers, streamers, artists and personal brands.',items:['Link-hub page','All your social links','Latest video embed','Short bio','Built mobile-first'],rev:1,days:2},
-  business:{setup:29,mo:15,once:199,renew:129,who:'For barbers, cleaners, tutors, trades, cafes and freelancers.',items:['One-page site','Services and prices','Opening hours','Google Map','Call, WhatsApp and email buttons'],rev:2,days:3},
-  shop:{setup:39,mo:19,once:249,renew:169,who:'For small sellers, crafters, resellers and merch drops.',items:['One-page shop','Up to 10 products','Stripe or PayPal buy buttons','Contact form'],rev:2,days:4}},
- {id:'creator', name:'Creator', size:'3–5 pages, own domain', bricks:4, hrs:2, hot:true,
-  content:{setup:79,mo:25,once:349,renew:199,who:'For growing creators, gaming channels, podcasters and musicians.',items:['Up to 4 pages: home, videos, about, contact','Latest videos update themselves','All your socials','Contact form','Your own domain set up'],rev:2,days:7},
-  business:{setup:99,mo:29,once:429,renew:249,who:'For salons, gyms, restaurants, trades, agencies and coaches.',items:['Up to 5 pages: home, services, about, gallery or reviews, contact','Booking or quote button','Google Map','Basic SEO','Your own domain set up'],rev:2,days:10},
-  shop:{setup:119,mo:35,once:499,renew:299,who:'For clothing brands, merch and small online stores.',items:['Store with up to 50 products','Cart and checkout','Order emails','Home, about and contact pages','Your own domain set up'],rev:2,days:14}},
- {id:'pro', name:'Pro', size:'6–10+ pages', bricks:8, hrs:4,
-  content:{setup:149,mo:45,once:649,renew:399,who:'For big creators, teams, esports orgs and communities.',items:['Everything in Creator, plus custom animations','Up to 8 pages','Merch page','Community or Discord page','Sponsor media kit with stats','Game maps or project pages'],rev:3,days:14},
-  business:{setup:189,mo:55,once:799,renew:499,who:'For established businesses, clinics, venues and multi-service companies.',items:['Everything in Creator, plus custom animations','Up to 10 pages','Online booking','Blog or news','Full SEO and Google Business profile help','Visitor analytics'],rev:3,days:18},
-  shop:{setup:249,mo:69,once:999,renew:599,who:'For growing brands with lots of stock.',items:['Everything in Creator, plus custom animations','Up to 200 products','Sizes and colours','Discount codes and reviews','Stock tracking','Shipping options'],rev:3,days:21}},
- {id:'custom', name:'Custom', size:'Quoted after a free chat', bricks:12, custom:true,
-  content:{from:1200,who:'For ideas that need more than a pack.',items:['Member logins','Leaderboards','Giveaway systems','Live stats dashboards','Fan clubs']},
-  business:{from:1500,who:'For bigger sites and systems.',items:['Large or multi-location sites','Client portals','Event sign-ups and tickets','Custom dashboards','Site migrations']},
-  shop:{from:2000,who:'For stores that have outgrown the basics.',items:['200+ products','Subscriptions and digital downloads','Wholesale pricing','Integrations','Store redesigns']}}
+ {name:'Starter', size:'One page', bricks:1, mo:12, setup:23, once:159, renew:99, days:3, rev:2, hrs:1,
+  who:'For trades, cleaners, barbers, tutors and anyone who just needs to be found.',
+  items:['One-page website','Your services and prices','Opening hours and Google Map','Call, WhatsApp and email buttons']},
+ {name:'Business', size:'Up to 5 pages', bricks:4, mo:23, setup:79, once:339, renew:199, days:10, rev:2, hrs:2, hot:true,
+  who:'For salons, cafés, gyms, coaches and growing local businesses.',
+  items:['Up to 5 pages','Booking or quote button','Gallery or reviews page','Local SEO so nearby customers find you','Your own domain set up']},
+ {name:'Pro', size:'Up to 10 pages', bricks:8, mo:44, setup:149, once:639, renew:399, days:18, rev:3, hrs:4,
+  who:'For established businesses that want everything.',
+  items:['Everything in Business','Up to 10 pages','Online booking','Blog or news section','Google Business profile help','Monthly visitor stats']}
 ];
-
-const state = {pay:'monthly', type:'business', cur:'gbp'};
-// optional link presets, e.g. ?pay=once&type=shop&cur=gbp
-const q = new URLSearchParams(location.search);
-[['pay',['monthly','once']],['type',['content','business','shop']],['cur',['usd','gbp']]].forEach(([k,ok])=>{
-  const v=q.get(k); if(ok.includes(v)){ state[k]=v; document.querySelectorAll(`[data-${k}]`).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset[k]===v))); }
-});
-
-function conv(usd){
-  if(state.cur==='usd') return usd;
-  const v = usd*0.8;
-  if(v<100) return Math.round(v);
-  if(v<1000) return Math.round((v+1)/10)*10-1;
-  return Math.round(v/10)*10;
-}
-const sym = ()=> state.cur==='usd'?'$':'£';
-const money = usd => sym()+conv(usd).toLocaleString('en-GB');
+const state = {pay:'monthly'};
+const gbp = n => '£'+n.toLocaleString('en-GB');
 
 function card(p,i){
-  const d = p[state.type];
-  const bricks = Array.from({length:p.bricks},()=>'<i></i>').join('');
-  let price, note='', save='';
-  if(p.custom){
-    if(state.pay==='monthly'){ price = `<p class="big talk"><span class="num">Let's talk</span></p>`; note='Free chat first, then a quote. Quotes include 1 year of upkeep.'; }
-    else { price = `<p class="big"><span class="per">from&nbsp;</span><span class="num">${money(d.from)}</span></p>`; note='Quote includes 1 year of upkeep.'; }
-  } else if(state.pay==='monthly'){
-    price = `<p class="big"><span class="num">${money(d.mo)}</span><span class="per">/mo</span></p>`;
-    note = `+ ${money(d.setup)} setup · 12-month minimum`;
+  let price, note, save='';
+  if(state.pay==='monthly'){
+    price = `<p class="big"><span class="num">${gbp(p.mo)}</span><span class="per">/month</span></p>`;
+    note = `+ ${gbp(p.setup)} setup · 12-month minimum`;
   } else {
-    price = `<p class="big"><span class="num">${money(d.once)}</span></p>`;
-    note = `includes 1 year of upkeep · renews ${money(d.renew)}/yr`;
-    const s = conv(d.setup)+12*conv(d.mo)-conv(d.once);
-    if(s>0) save = `<span class="save">Save ${sym()}${s.toLocaleString('en-GB')} vs monthly</span>`;
+    price = `<p class="big"><span class="num">${gbp(p.once)}</span><span class="per">/year</span></p>`;
+    note = `build + 1 year of upkeep · then ${gbp(p.renew)}/yr`;
+    const s = p.setup + 12*p.mo - p.once;
+    if(s>0) save = `<span class="save">Save ${gbp(s)} vs monthly</span>`;
   }
-  const facts = p.custom
-    ? `<div><span class="muted">Revisions</span><b>In your quote</b></div><div><span class="muted">Ready in</span><b>Planned with you</b></div>`
-    : `<div><span class="muted">Revisions</span><b>${d.rev}</b></div><div><span class="muted">Ready in</span><b>${d.days} days</b></div><div><span class="muted">Changes</span><b>${p.hrs} hr${p.hrs>1?'s':''}/mo</b></div>`;
+  const bricks = Array.from({length:p.bricks},()=>'<i></i>').join('');
   return `<li class="plan${p.hot?' hot':''}" data-i="${i}" aria-label="${p.name} plan">
-    ${p.hot?'<span class="badge"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M8 1l2.1 4.5 4.9.6-3.6 3.4.9 4.9L8 12l-4.3 2.4.9-4.9L1 6.1l4.9-.6z"/></svg>Most popular</span>':''}
+    ${p.hot?'<span class="badge">Most popular</span>':''}
     <div class="plan-top"><div><h3>${p.name}</h3><span class="size muted small">${p.size}</span></div><span class="stack" aria-hidden="true">${bricks}</span></div>
-    <p class="who muted">${d.who}</p>
+    <p class="who muted">${p.who}</p>
     <div class="price">${price}<p class="note small muted">${note}</p>${save}</div>
-    <ul class="ticks">${d.items.map(t=>`<li>${t}</li>`).join('')}</ul>
-    <div class="facts">${facts}</div>
+    <ul class="ticks">${p.items.map(t=>`<li>${t}</li>`).join('')}</ul>
+    <div class="facts"><div><span class="muted">Ready in</span><b>~${p.days} days</b></div><div><span class="muted">Revisions</span><b>${p.rev}</b></div><div><span class="muted">Updates</span><b>${p.hrs} hr${p.hrs>1?'s':''}/mo</b></div></div>
     <div class="acts">
       <button class="btn ${p.hot?'btn-accent':'btn-quiet'}" type="button" data-choose="${p.name}">Choose ${p.name}</button>
-      <a class="wa" href="${WA}" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>or WhatsApp me</a>
     </div>
   </li>`;
 }
-
 const plansEl = document.getElementById('plans');
-let first = true;
-function render(){
-  const prev = [...plansEl.querySelectorAll('.num')].map(n=>n.textContent);
-  const scroll = plansEl.scrollLeft;
-  plansEl.innerHTML = PLANS.map(card).join('');
-  plansEl.scrollLeft = scroll;
-  if(!first && !RM){
-    plansEl.querySelectorAll('.num').forEach((n,i)=>{
-      if(n.textContent!==prev[i]) n.animate([{transform:'translateY(-.45em)',opacity:0},{transform:'translateY(.05em)',opacity:1,offset:.7},{transform:'none',opacity:1}],{duration:360,delay:i*45,easing:'cubic-bezier(.2,.9,.25,1.2)',fill:'backwards'});
-    });
-    plansEl.querySelectorAll('.stack i').forEach((b,k)=>b.animate([{transform:'translateY(-10px)',opacity:0},{transform:'none',opacity:1}],{duration:260,delay:k*18,easing:'cubic-bezier(.2,.9,.25,1.3)',fill:'backwards'}));
-  }
-  first = false;
-  // static money bits
-  document.querySelectorAll('[data-usd]').forEach(el=>{el.textContent=(el.dataset.prefix||'')+money(+el.dataset.usd)+(el.dataset.suffix||'')});
-  document.querySelectorAll('[data-care]').forEach(el=>{const [m,y]=el.dataset.care.split(',');el.textContent=`+${money(+m)}/mo or +${money(+y)}/yr`});
-  document.querySelectorAll('[data-range]').forEach(el=>{const [a,b]=el.dataset.range.split(',');el.textContent=`${money(+a)}–${money(+b)}`});
-  observeJump();
-}
+function render(){ const sc=plansEl.scrollLeft; plansEl.innerHTML = PLANS.map(card).join(''); plansEl.scrollLeft=sc; observeJump(); }
 
-function setThumb(seg){
-  const on = seg.querySelector('[aria-pressed="true"]'), t = seg.querySelector('.thumb');
-  if(!on||!t) return;
-  t.style.width = on.offsetWidth+'px';
-  t.style.transform = `translateX(${on.offsetLeft}px)`;
-}
-document.querySelectorAll('.seg').forEach(seg=>{
-  seg.addEventListener('click',e=>{
-    const b = e.target.closest('button'); if(!b) return;
-    const key = Object.keys(b.dataset)[0];
-    seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
-    state[key] = b.dataset[key];
-    setThumb(seg); render();
-  });
-});
-const allThumbs = ()=>document.querySelectorAll('.seg').forEach(setThumb);
-addEventListener('resize',allThumbs);
-document.fonts && document.fonts.ready.then(allThumbs);
-
-// phone jump chips
-const jump = document.querySelector('.jump');
-jump.addEventListener('click',e=>{
+const seg = document.querySelector('.seg.pay');
+function setThumb(){ const on=seg.querySelector('[aria-pressed="true"]'), t=seg.querySelector('.thumb'); if(!on||!t) return; t.style.width=on.offsetWidth+'px'; t.style.transform=`translateX(${on.offsetLeft}px)`; }
+seg.addEventListener('click',e=>{
   const b=e.target.closest('button'); if(!b) return;
-  const card = plansEl.children[+b.dataset.jump];
-  plansEl.scrollTo({left:card.offsetLeft-plansEl.offsetLeft - parseFloat(getComputedStyle(plansEl).paddingLeft) + 0, behavior:RM?'auto':'smooth'});
+  seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  state.pay=b.dataset.pay; setThumb(); render();
 });
-let jo;
-function observeJump(){
-  jo && jo.disconnect();
-  jo = new IntersectionObserver(es=>{
-    es.forEach(en=>{ if(en.isIntersecting){ const i=en.target.dataset.i; jump.querySelectorAll('button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.jump===i))); } });
-  },{root:plansEl,threshold:.6});
-  [...plansEl.children].forEach(c=>jo.observe(c));
-}
+addEventListener('resize',setThumb); document.fonts && document.fonts.ready.then(setThumb);
 
-// choose -> prefill form
-const form = document.getElementById('form');
-document.getElementById('diy-btn').addEventListener('click',()=>{
-  const t=document.getElementById('type'); t.value='Ready-made HTML'; t.closest('.f').classList.add('filled');
-  const m=document.getElementById('msg'); if(!m.value) m.value="Hi! I'd like a ready-made website HTML. It's for: ";
-  (innerWidth<900?form:document.getElementById('contact')).scrollIntoView({behavior:RM?'auto':'smooth'});
-  setTimeout(()=>document.getElementById('name').focus({preventScroll:true}), RM?0:650);
-});
+const jump=document.querySelector('.jump');
+jump.addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; const c=plansEl.children[+b.dataset.jump]; plansEl.scrollTo({left:c.offsetLeft-plansEl.offsetLeft-parseFloat(getComputedStyle(plansEl).paddingLeft),behavior:RM?'auto':'smooth'}); });
+let jo; function observeJump(){ jo&&jo.disconnect(); jo=new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ const i=en.target.dataset.i; jump.querySelectorAll('button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.jump===i))); } }),{root:plansEl,threshold:.6}); [...plansEl.children].forEach(c=>jo.observe(c)); }
+
+const form=document.getElementById('form');
 plansEl.addEventListener('click',e=>{
-  const b = e.target.closest('[data-choose]'); if(!b) return;
-  const pack = b.dataset.choose;
-  const set = (id,v)=>{const el=document.getElementById(id); el.value=v; el.closest('.f').classList.add('filled')};
-  set('type', {business:'Business website',shop:'Online shop',content:'Creator website'}[state.type]);
-  set('pack', pack);
-  document.getElementById('pay').value = state.pay==='monthly'?'Monthly':'Pay once';
+  const b=e.target.closest('[data-choose]'); if(!b) return;
+  const pk=document.getElementById('pack'); pk.value=b.dataset.choose; pk.closest('.f').classList.add('filled');
+  document.getElementById('pay').value = state.pay==='monthly'?'Monthly':'Pay once a year';
   (innerWidth<900?form:document.getElementById('contact')).scrollIntoView({behavior:RM?'auto':'smooth'});
-  setTimeout(()=>document.getElementById('name').focus({preventScroll:true}), RM?0:650);
+  setTimeout(()=>document.getElementById('name').focus({preventScroll:true}),RM?0:650);
 });
+document.getElementById('pack').addEventListener('change',e=>e.target.closest('.f').classList.remove('filled'));
 
-form.querySelectorAll('select').forEach(s=>s.addEventListener('change',()=>s.closest('.f').classList.remove('filled')));
-
-// validation
-const rules = {
-  name: v=> v.trim() ? '' : 'Add your name so I know who to reply to.',
-  email: v=> /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'That email looks off. Check it for typos, like a missing @ or dot.',
-  msg: v=> v.trim().length>=10 ? '' : 'Tell me a little about what you need (a sentence is fine).'
+const rules={
+  name:v=>v.trim()?'':'Add your name so I know who to reply to.',
+  email:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())?'':'That email looks off. Check it for typos, like a missing @ or dot.',
+  msg:v=>v.trim().length>=10?'':'Tell me a little about your business (a sentence is fine).'
 };
-function check(id){
-  const el = document.getElementById(id), msg = rules[id](el.value), err = document.getElementById(id+'-err');
-  err.textContent = msg; el.setAttribute('aria-invalid', msg?'true':'false'); return !msg;
-}
-Object.keys(rules).forEach(id=>{
-  const el=document.getElementById(id);
-  el.addEventListener('blur',()=>{ if(el.value) check(id) });
-  el.addEventListener('input',()=>{ if(el.getAttribute('aria-invalid')==='true') check(id) });
-});
+function check(id){ const el=document.getElementById(id), m=rules[id](el.value), err=document.getElementById(id+'-err'); err.textContent=m; el.setAttribute('aria-invalid',m?'true':'false'); return !m; }
+Object.keys(rules).forEach(id=>{ const el=document.getElementById(id); el.addEventListener('blur',()=>{ if(el.value) check(id) }); el.addEventListener('input',()=>{ if(el.getAttribute('aria-invalid')==='true') check(id) }); });
 form.addEventListener('submit',async e=>{
   e.preventDefault();
-  const ok = Object.keys(rules).map(check);
+  const ok=Object.keys(rules).map(check);
   if(ok.includes(false)){ document.getElementById(Object.keys(rules)[ok.indexOf(false)]).focus(); return; }
   if(form._gotcha.value) return;
-  const fd = new FormData(form);
-  fd.set('currency', state.cur.toUpperCase());
-  const btn = form.querySelector('[type=submit]'); btn.disabled = true; btn.firstChild.textContent = 'Sending… ';
+  const fd=new FormData(form);
+  const btn=form.querySelector('[type=submit]'); btn.disabled=true; btn.firstChild.textContent='Sending… ';
   try{
-    if(FORM_ENDPOINT){
-      const r = await fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{Accept:'application/json'}});
-      if(!r.ok) throw new Error();
-    } else {
-      const body = [...fd.entries()].filter(([k,v])=>v && k!=='_gotcha').map(([k,v])=>`${k}: ${v}`).join('\n');
-      location.href = `mailto:nshinjicontact@protonmail.com?subject=${encodeURIComponent('Website enquiry from '+fd.get('name'))}&body=${encodeURIComponent(body)}`;
-    }
-    form.hidden = true; const d = document.getElementById('done'); d.hidden = false; d.focus();
+    const r=await fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{Accept:'application/json'}}); if(!r.ok) throw 0;
+    form.hidden=true; const d=document.getElementById('done'); d.hidden=false; d.focus();
   }catch(_){
-    btn.disabled=false; btn.firstChild.textContent='Send message ';
-    document.getElementById('msg-err').textContent = "That didn't send. Try again, or email nshinjicontact@protonmail.com directly.";
+    btn.disabled=false; btn.firstChild.textContent='Send and get my quote ';
+    document.getElementById('msg-err').textContent="That didn't send. Try again, or WhatsApp me on 07865 606629.";
   }
 });
 
-// entrances
-const io = new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} }),{rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.rise').forEach(el=>io.observe(el));
-
-// floating WhatsApp: hide over contact + footer so it never covers the form or its button
-const fw = document.getElementById('float-wa'), hideFor = new Set();
-const fo = new IntersectionObserver(es=>{ es.forEach(en=> en.isIntersecting?hideFor.add(en.target):hideFor.delete(en.target)); fw.classList.toggle('hide', hideFor.size>0); });
-['contact','footer','top','plans','ready-made'].forEach(id=>fo.observe(document.getElementById(id)));
-
-render(); allThumbs();
+// phone bar hides over the quote form and footer
+const mbar=document.getElementById('mbar'), hideFor=new Set();
+const mo=new IntersectionObserver(es=>{ es.forEach(en=>en.isIntersecting?hideFor.add(en.target):hideFor.delete(en.target)); mbar.classList.toggle('hide',hideFor.size>0); });
+['contact','footer'].forEach(id=>mo.observe(document.getElementById(id)));
 
 // phone menu
-const nav = document.querySelector('.nav'), mBtn = document.getElementById('menu-btn');
-const setMenu = open => { nav.classList.toggle('open',open); mBtn.setAttribute('aria-expanded',String(open)); mBtn.setAttribute('aria-label',open?'Close menu':'Open menu'); };
+const nav=document.querySelector('.nav'), mBtn=document.getElementById('menu-btn');
+const setMenu=open=>{ nav.classList.toggle('open',open); mBtn.setAttribute('aria-expanded',String(open)); mBtn.setAttribute('aria-label',open?'Close menu':'Open menu'); };
 mBtn.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
 nav.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-document.addEventListener('keydown',e=>{ if(e.key==='Escape' && nav.classList.contains('open')){ setMenu(false); mBtn.focus(); } });
-document.addEventListener('click',e=>{ if(nav.classList.contains('open') && !nav.contains(e.target)) setMenu(false); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&nav.classList.contains('open')){ setMenu(false); mBtn.focus(); } });
+document.addEventListener('click',e=>{ if(nav.classList.contains('open')&&!nav.contains(e.target)) setMenu(false); });
 
-// light / dark toggle: follows the device until the visitor picks one
-const rootEl = document.documentElement, tBtn = document.getElementById('theme');
-const sysDark = matchMedia('(prefers-color-scheme: dark)');
-const C = window.nshinjiConsent, canSave = ()=> ['all','required'].includes(C.get());
-let saved = null; try{ if(canSave()) saved = localStorage.getItem('nshinji-theme'); else if(C.get()==='none') localStorage.removeItem('nshinji-theme'); }catch(_){}
-const isDark = ()=> rootEl.dataset.theme ? rootEl.dataset.theme==='dark' : true;
-function paintTheme(){
-  const d = isDark();
-  document.getElementById('root') ? document.getElementById('root').classList.toggle('is-dark',d) : document.body.classList.toggle('is-dark',d);
-  tBtn.setAttribute('aria-label', d?'Switch to light mode':'Switch to dark mode');
-  const m=document.querySelector('meta[name=theme-color]'); if(m) m.content = getComputedStyle(rootEl).getPropertyValue('--bg').trim();
-}
-if(saved==='light'||saved==='dark') rootEl.dataset.theme = saved;
-tBtn.addEventListener('click',()=>{
-  const next = isDark()?'light':'dark'; rootEl.dataset.theme = next;
-  try{ if(canSave()) localStorage.setItem('nshinji-theme',next); }catch(_){}
-  paintTheme();
-});
-C.on(()=>{ try{ if(!canSave()) localStorage.removeItem('nshinji-theme'); else if(rootEl.dataset.theme) localStorage.setItem('nshinji-theme',rootEl.dataset.theme); }catch(_){} });
-sysDark.addEventListener('change',paintTheme);
-new MutationObserver(paintTheme).observe(rootEl,{attributes:true,attributeFilter:['data-theme']});
-paintTheme();
+render(); setThumb();
 })();
 </script>
-
 </body>
 </html>
