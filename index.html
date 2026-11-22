@@ -5,22 +5,45 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co https://abacus.jasoncameron.dev; form-action 'none'; base-uri 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>nshinji · Custom websites for creators, businesses and shops</title>
-<meta name="description" content="nshinji builds fast, custom websites for creators, businesses and shops, then keeps them updated. Plans from $12/month with upkeep included.">
+<title>Website Design in Porthcawl &amp; South Wales from £12/month | nshinji</title>
+<meta name="description" content="Affordable websites for small businesses, shops and creators in Porthcawl, Bridgend and across South Wales and the UK. Hosting and updates included, from £12 a month. Free quote within 24 hours.">
 <link rel="canonical" href="https://nshinjiportfolio.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="nshinji">
-<meta property="og:title" content="nshinji · Custom websites for creators, businesses and shops">
-<meta property="og:description" content="Fast, custom sites that look right on every phone. Built and kept updated for you. From $12/month.">
+<meta property="og:title" content="Websites for small businesses from £12/month · nshinji">
+<meta property="og:description" content="Websites that work on every phone and show up on Google. Built, hosted and kept updated for you. Free quote within 24 hours.">
 <meta property="og:url" content="https://nshinjiportfolio.com/">
 <meta property="og:image" content="https://nshinjiportfolio.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="nshinji: websites built brick by brick">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_GB">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "nshinji",
+  "description": "Website design for small businesses, online shops and creators. Hosting and updates included.",
+  "url": "https://nshinjiportfolio.com/",
+  "image": "https://nshinjiportfolio.com/og-image.png",
+  "logo": "https://nshinjiportfolio.com/apple-touch-icon.png",
+  "email": "nshinjicontact@protonmail.com",
+  "telephone": "+447865606629",
+  "priceRange": "££",
+  "address": {"@type": "PostalAddress", "addressLocality": "Porthcawl", "addressRegion": "Wales", "addressCountry": "GB"},
+  "areaServed": [{"@type": "Place", "name": "Porthcawl"}, {"@type": "Place", "name": "Bridgend"}, {"@type": "Place", "name": "South Wales"}, {"@type": "Country", "name": "United Kingdom"}],
+  "sameAs": ["https://www.youtube.com/@nshinjiiii", "https://www.tiktok.com/@nshinjii", "https://www.instagram.com/nshinjiii", "https://nshinjimedia.co.uk"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "Business website, Starter", "priceCurrency": "GBP", "price": "12", "description": "One-page business website with hosting and upkeep, per month"},
+    {"@type": "Offer", "name": "Business website, Creator", "priceCurrency": "GBP", "price": "23", "description": "Up to 5 pages with your own domain and basic SEO, per month"}
+  ]
+}
+</script>
+
 <meta name="theme-color" content="#09080c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -488,65 +511,59 @@ footer{padding-top:64px}
 .ck-link{all:unset;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (max-width:420px){.ck-acts{grid-template-columns:1fr}}
 
-/* ===== scroll stage hero: one 3D brick, big type ===== */
-.stage{position:relative;height:240vh;isolation:isolate}
-.stage-pin{position:sticky;top:0;height:100svh;padding-top:68px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(24px,4vw,64px);overflow:hidden}
-.stage::before{content:"";position:absolute;z-index:-1;inset:0 0 auto;height:100svh;background:radial-gradient(50% 60% at 75% 45%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%),radial-gradient(40% 50% at 10% 10%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%);pointer-events:none}
-.stage-copy{padding-top:40px}
+/* ===== plain, sales-first hero ===== */
+.hero2{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(28px,4vw,64px);align-items:center;padding-top:clamp(40px,6vw,88px);padding-bottom:clamp(24px,3vw,40px)}
+.hero2::before{content:"";position:absolute;z-index:-1;inset:-80px 0 auto;height:620px;background:radial-gradient(50% 60% at 80% 30%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%);pointer-events:none}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:var(--step-small);padding:6px 12px 6px 10px;border-radius:999px;background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent)}
-.eyebrow b{width:9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 #3ddc8466;animation:pulse 2.4s infinite}
-.stage h1{text-wrap:wrap;margin-top:24px;font-size:clamp(2.6rem,1rem + 5.4vw,6rem);line-height:.92;letter-spacing:-.05em;max-width:12ch}
-.swap{display:inline-block;color:var(--accent-text);overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
-.swap-in{display:inline-block}
-.swap-in.out{animation:swapOut .22s var(--ease) forwards}
-.swap-in.in{animation:swapIn .5s var(--snap)}
-@keyframes swapOut{to{transform:translateY(-100%);opacity:0}}
-@keyframes swapIn{from{transform:translateY(100%);opacity:0}to{transform:none;opacity:1}}
-.stage .hero-sub{margin-top:24px;max-width:38ch;color:var(--muted);font-size:var(--step-lead);line-height:1.3}
-.stage .hero-acts{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:32px}
-.btn-big{min-height:60px;padding:0 28px;font-size:1.125rem}
-
-.stage-obj{position:relative;height:min(70svh,560px);display:grid;place-items:center;perspective:1100px}
-.glow{position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:var(--accent);filter:blur(90px);opacity:.35}
-.lego{--w:clamp(170px,22vw,290px);--h:calc(var(--w)*.72);--rx:-22deg;--ry:-32deg;--y:0px;position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:translateY(var(--y)) rotateX(var(--rx)) rotateY(var(--ry));will-change:transform}
-.lf{position:absolute;inset:0;background:var(--accent);border-radius:6px;backface-visibility:hidden;display:grid;place-items:center}
-.lf span{font-weight:800;color:var(--accent-ink);font-size:calc(var(--w)*.55);letter-spacing:-.05em;line-height:1;opacity:.95}
-.front{transform:translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#8b4cf5,#6a2bd6)}
-.back{transform:rotateY(180deg) translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#7a3ae8,#5a22b8)}
-.right{transform:rotateY(90deg) translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#6b2ed0,#4c1a9e)}
-.left{transform:rotateY(-90deg) translateZ(calc(var(--w)/2));background:linear-gradient(180deg,#7d3ce9,#5b23ba)}
-.top{height:var(--w);top:calc((var(--h) - var(--w))/2);transform:rotateX(90deg) translateZ(calc(var(--h)/2));background:#9459f7;display:grid;place-items:stretch;grid-template-columns:1fr 1fr;padding:12%;gap:16%;transform-style:preserve-3d;backface-visibility:visible}
-.bottom{height:var(--w);top:calc((var(--h) - var(--w))/2);transform:rotateX(-90deg) translateZ(calc(var(--h)/2));background:#3d1580}
-.top i{border-radius:50%;background:radial-gradient(circle at 35% 30%,#b993ff,#8a4cf3 55%,#6a2bd6);box-shadow:0 0 0 2px #5b23ba inset;transform:translateZ(calc(var(--w)*.06));display:block}
-.shadow{position:absolute;bottom:4%;width:55%;height:26px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);filter:blur(4px)}
-:root[data-theme="light"] .shadow{background:radial-gradient(closest-side,rgba(40,20,80,.3),transparent)}
-.stage-steps{position:absolute;left:max(var(--m),calc((100% - var(--max)) / 2));bottom:28px;display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:var(--step-small);color:var(--muted)}
-.stage-steps li{display:flex;align-items:center;gap:8px;transition:color .3s}
-.stage-steps li::before{content:"";width:22px;height:8px;border-radius:2px;background:var(--brick-dim);transition:background-color .3s,width .4s var(--ease)}
-.stage-steps li.on{color:var(--ink)}
-.stage-steps li.on::before{background:var(--accent);width:36px}
-@media (max-width:820px){
-  .stage{height:170vh}
-  .stage-pin{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-items:start;gap:0;padding-top:24px}
-  .stage-copy{padding-top:8px}
-  .stage h1{font-size:clamp(2.4rem,9.5vw,3.6rem)}
-  .stage .hero-sub{font-size:1.0625rem;margin-top:16px}
-  .stage .hero-acts{margin-top:22px}
-  .stage .hero-acts .btn{flex:1 1 100%}
-  .stage-obj{height:auto;min-height:220px}
-  .lego{--w:clamp(120px,36vw,190px)}
-  .stage-steps{bottom:20px}
+.eyebrow b{width:9px;height:9px;border-radius:50%;background:#3ddc84;flex:none}
+.hero2 h1{margin-top:22px;font-size:clamp(2.3rem,1.1rem + 4vw,4.5rem);line-height:.98;letter-spacing:-.045em;max-width:15ch;text-wrap:balance}
+.hero2 h1 > span{display:block;color:var(--accent-text);margin-top:.12em}
+.hero2 .hero-sub{margin-top:22px;max-width:44ch;color:var(--muted);font-size:var(--step-lead);line-height:1.35}
+.hero2 .hero-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.btn-big{min-height:58px;padding:0 26px;font-size:1.125rem}
+.hero-wa{display:inline-flex;margin-top:18px}
+.h2-card{background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);border-radius:calc(var(--radius) + 6px);padding:clamp(22px,2.4vw,32px)}
+.h2-card-top{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.h2-card .ticks{margin-top:18px}
+.h2-card .ticks li{padding-block:6px}
+.h2-card-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:var(--step-small);line-height:1.4}
+.h2-card .stack{display:inline-grid;grid-template-columns:repeat(2,12px);gap:3px}
+.h2-card .stack i{width:12px;height:9px;background:var(--accent);border-radius:2px}
+@media (max-width:900px){
+  .hero2{grid-template-columns:1fr}
+  .hero2 .hero-acts .btn{flex:1 1 220px}
 }
-@media (max-height:640px) and (max-width:820px){.stage-obj{display:none}}
-@media (prefers-reduced-motion:reduce){.stage{height:auto}.stage-pin{position:relative;height:auto;min-height:100svh}.stage-steps{display:none}}
 
-.stats{padding-block:clamp(24px,3vw,40px) 0}
+.stats{padding-block:clamp(16px,2vw,28px) 0}
 .stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.stats li{background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);border-radius:var(--radius);padding:22px}
-.stats strong{display:block;font-weight:800;font-size:clamp(2rem,1.4rem + 1.6vw,3rem);letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.stats li{background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);border-radius:var(--radius);padding:20px}
+.stats strong{display:block;font-weight:800;font-size:clamp(1.75rem,1.3rem + 1.3vw,2.6rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .stats span{display:block;margin-top:8px;color:var(--muted);font-size:var(--step-small);line-height:1.35}
 @media (max-width:760px){.stats ul{grid-template-columns:1fr 1fr}}
-.wall-band{padding-top:clamp(48px,6vw,80px)}
+
+.steps3{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;counter-reset:s}
+.steps3 li{background:var(--surface);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);border-radius:var(--radius);padding:22px;counter-increment:s}
+.steps3 li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:1.25rem;margin-bottom:16px}
+.steps3 b{display:block;font-size:1.1875rem;font-weight:800;letter-spacing:-.015em}
+.steps3 p{margin-top:6px;color:var(--muted);line-height:1.45}
+.how-cta{margin-top:24px}
+@media (max-width:900px){.steps3{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps3{grid-template-columns:1fr}}
+
+.controls .ctl{display:flex;flex-direction:column;gap:6px}
+.controls .seg button{white-space:nowrap}
+.controls{flex-wrap:wrap}
+.ctl-l{font-size:var(--step-small);font-weight:500;color:var(--muted)}
+.controls .cur-ctl{margin-left:auto}
+@media (max-width:900px){.controls .cur-ctl{margin-left:0}}
+.extras > summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:52px;font-weight:500}
+.extras > summary::-webkit-details-marker{display:none}
+.extras[open] > summary{margin-bottom:8px}
+.extras .addons b{white-space:nowrap}
+#contact .f label .muted{font-weight:400}
+#contact .c-line a{color:inherit}
+.nav-cta{white-space:nowrap}.nav-cta .less{display:none}
+@media (max-width:560px){.nav-cta .more{display:none}.nav-cta .less{display:inline}}
 
 /* ===== phone + tablet fixes ===== */
 @media (max-width:760px){.f-cols > div:first-child{grid-column:1/-1}}
@@ -554,9 +571,6 @@ footer{padding-top:64px}
   .mark{font-size:1.15rem;gap:8px}
   .nav-end{gap:4px}
   .nav .btn{padding:0 12px}
-  .stage-steps{gap:10px;font-size:.8125rem}
-  .stage-steps li::before{width:14px}
-  .stage-steps li.on::before{width:22px}
 }
 </style>
 </head>
@@ -572,136 +586,94 @@ footer{padding-top:64px}
   <nav class="nav" aria-label="Main">
     <a class="mark" href="#top" aria-label="nshinji, back to top"><i aria-hidden="true">N</i>nshinji</a>
     <ul id="nav-links">
-      <li><a href="#socials">Socials</a></li>
-      <li><a href="#websites">Websites</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#pricing">Prices</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#websites">Examples</a></li>
+      <li><a href="#faq">Questions</a></li>
       <li><a href="/thumbnails.html">Thumbnails</a></li>
-      <li class="only-phone-li"><a href="#contact">Contact</a></li>
+      <li class="only-phone-li"><a href="#contact">Get a quote</a></li>
     </ul>
     <div class="nav-end">
       <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="theme" id="theme" type="button" aria-label="Switch to light mode"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z" fill="currentColor"/></svg></button>
-      <a class="btn btn-accent" href="#contact">Start<span class="more">&nbsp;a project</span></a>
+      <a class="btn btn-accent nav-cta" href="#contact"><span class="more">Get a free quote</span><span class="less">Quote</span></a>
     </div>
   </nav>
 </header>
 
 <main id="main">
-<section class="stage" id="top" aria-labelledby="hero-h">
-  <div class="stage-pin wrap">
-    <div class="stage-copy">
-      <p class="eyebrow rise"><b aria-hidden="true"></b>Taking new websites now · replies within 24 hours</p>
-      <h1 id="hero-h" class="rise" style="--d:60ms">Websites built<br> brick by brick<br> for <span class="swap" aria-hidden="true"><span class="swap-in" id="swap">creators</span></span><span class="sr-only">creators, businesses and shops</span>.</h1>
-      <p class="hero-sub rise" style="--d:120ms">Fast, custom sites that look right on every phone. I build them, then keep them updated, so you never touch code. I also make Roblox videos.</p>
-      <div class="hero-acts rise" style="--d:180ms">
-        <a class="btn btn-accent btn-big" href="#pricing">See website prices <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>or WhatsApp me</a>
-      </div>
+<section class="hero2 wrap" id="top" aria-labelledby="hero-h">
+  <div class="h2-copy">
+    <p class="eyebrow"><b aria-hidden="true"></b>Taking new clients · reply within 24 hours</p>
+    <h1 id="hero-h">I build websites for small businesses. <span>From <span data-usd="15"></span> a month.</span></h1>
+    <p class="hero-sub">You get a website that works on every phone, shows up on Google and gets you calls. I build it, host it and keep it updated, so you never touch code.</p>
+    <div class="hero-acts">
+      <a class="btn btn-accent btn-big" href="#contact">Get a free quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-quiet btn-big" href="#pricing">See prices</a>
     </div>
-    <div class="stage-obj" aria-hidden="true">
-      <div class="glow"></div>
-      <div class="lego" id="lego">
-        <div class="lf front"><span id="lego-letter">N</span></div>
-        <div class="lf back"><span>N</span></div>
-        <div class="lf right"></div>
-        <div class="lf left"></div>
-        <div class="lf top"><i></i><i></i><i></i><i></i></div>
-        <div class="lf bottom"></div>
-      </div>
-      <div class="shadow"></div>
-    </div>
-    <ol class="stage-steps" aria-hidden="true"><li class="on">Creators</li><li>Businesses</li><li>Shops</li></ol>
+    <a class="wa hero-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Or WhatsApp me: +44 7865 606629</a>
   </div>
+  <aside class="h2-card" aria-label="What every website includes">
+    <p class="h2-card-top"><span class="stack" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Every website includes</p>
+    <ul class="ticks">
+      <li>Looks right on phones, tablets and laptops</li>
+      <li>Call, WhatsApp and email buttons</li>
+      <li>Set up so Google can find you</li>
+      <li>Hosting, fixes and updates, done for you</li>
+      <li>Your domain, in your name</li>
+      <li>A quote before any work starts</li>
+    </ul>
+    <p class="h2-card-foot">Based in Porthcawl, South Wales. Working with businesses anywhere in the UK.</p>
+  </aside>
 </section>
 
 <section class="stats wrap" aria-label="Quick facts">
   <ul>
-    <li class="rise"><strong>2</strong><span>sites live, one for a paying client</span></li>
-    <li class="rise" style="--d:60ms"><strong data-count="tiktok">5,129</strong><span>TikTok followers</span></li>
-    <li class="rise" style="--d:120ms"><strong data-usd="12" data-suffix="/mo"></strong><span>to start, upkeep included</span></li>
-    <li class="rise" style="--d:180ms"><strong>24h</strong><span>reply time</span></li>
+    <li><strong data-usd="15"></strong><span>a month for a business site, upkeep included</span></li>
+    <li><strong>2–4 days</strong><span>for a one-page site</span></li>
+    <li><strong>24h</strong><span>reply time</span></li>
+    <li><strong>2</strong><span>sites live, one for a paying client</span></li>
   </ul>
 </section>
 
-<section class="wall-band wrap" aria-label="Brick wall">
-  <div class="wall">
-    <ul class="bricks" aria-label="N-S-H-I-N-J-I. Tap a brick.">
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick N">N</button></li>
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick S">S</button></li>
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick H">H</button></li>
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick I">I</button></li>
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick N">N</button></li>
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick J">J</button></li>
-      <li style="display:contents"><button class="brick" type="button" aria-label="Brick I">I</button></li>
-    </ul>
-    <div class="wall-foot"><span>Tap a brick</span><span>Web design · Roblox · Blox Fruits · YouTube · TikTok · Instagram</span></div>
-  </div>
-</section>
-
-<section class="sec wrap" id="socials" aria-labelledby="soc-h">
-  <div class="grid">
-    <div class="socials-head rise">
-      <h2 class="h2" id="soc-h">Follow along</h2>
-      <p class="lead muted">Roblox and Blox Fruits videos, funny moments, challenges and Shorts.</p>
-    </div>
-    <ul class="soc">
-      <li class="rise"><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener"><strong>YouTube</strong><span>@nshinjiiii · <span data-count="youtube">–</span> subscribers</span><em>Subscribe</em></a></li>
-      <li class="rise" style="--d:70ms"><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener"><strong>TikTok</strong><span>@nshinjii · <span data-count="tiktok">–</span> followers</span><em>Follow</em></a></li>
-      <li class="rise" style="--d:140ms"><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener"><strong>Instagram</strong><span>@nshinjiii · <span data-count="instagram">–</span> followers</span><em>Follow</em></a></li>
-    </ul>
-    <div class="counter rise" style="--d:200ms" aria-live="polite">
-      <div><strong data-count="live">–</strong><span class="muted small"><i class="live-dot" aria-hidden="true"></i><span id="now-label">here right now</span></span></div>
-      <div><strong data-count="visits">–</strong><span class="muted small">total visits to this site</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec wrap" id="websites" aria-labelledby="work-h" style="padding-top:0">
-  <div class="work-head rise">
-    <h2 class="h2" id="work-h">Websites I've built</h2>
-    <p class="lead muted">Real sites for real people, plus my own.</p>
-  </div>
-  <ul class="projects">
-    <li class="rise"><a class="proj" href="https://sg0hann.online" target="_blank" rel="noopener">
-      <h3>sg0hann.online</h3>
-      <div class="meta"><b>Client · SG0HANN, OG Fortnite creator</b><span class="muted">The official hub for his videos, maps and community, with a light mode.</span><span class="go">Visit site <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
-    </a></li>
-    <li class="rise" style="--d:70ms"><a class="proj" href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">
-      <h3>nshinjimedia.co.uk</h3>
-      <div class="meta"><b>My main site · nshinji media</b><span class="muted">Home for my YouTube content and social media.</span><span class="go">Visit site <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
-    </a></li>
-    <li class="rise" style="--d:140ms"><a class="proj next" href="#contact">
-      <h3>Yours next</h3>
-      <div class="meta"><b>Open slot · your-site.com</b><span>Creator, business or shop — tell me what you're building.</span><span class="go">Start a project <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
-    </a></li>
-  </ul>
+<section class="sec wrap" id="how" aria-labelledby="how-h">
+  <h2 class="h2 rise" id="how-h">How it works</h2>
+  <ol class="steps3">
+    <li class="rise"><b>Tell me what you need</b><p>Fill in the quote form or WhatsApp me. A couple of lines is enough.</p></li>
+    <li class="rise" style="--d:60ms"><b>Get your price</b><p>I reply within 24 hours with a fixed price. No surprises later.</p></li>
+    <li class="rise" style="--d:120ms"><b>Send your stuff</b><p>Your logo, photos, prices and opening hours. I can write the text for you.</p></li>
+    <li class="rise" style="--d:180ms"><b>Your site goes live</b><p>You check it, ask for changes, then it goes live. I keep it updated after.</p></li>
+  </ol>
+  <p class="how-cta rise"><a class="btn btn-accent" href="#contact">Start with a free quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
 </section>
 
 <section class="sec wrap pricing" id="pricing" aria-labelledby="price-h" style="padding-top:0">
   <div class="p-head rise">
-    <h2 class="h2" id="price-h">Website pricing</h2>
-    <p class="lead muted">Pick a size, pick your type of site, then pay monthly or pay once for the year. Every plan includes upkeep.</p>
+    <h2 class="h2" id="price-h">Prices</h2>
+    <p class="lead muted">Every plan includes hosting, fixes and updates. Pay monthly, or pay once for the year and save.</p>
   </div>
 
   <div class="plan-zone">
   <div class="controls" role="group" aria-label="Pricing options">
+    <div class="ctl"><span class="ctl-l">What's it for?</span>
+    <div class="seg type" role="group" aria-label="Type of site">
+      <span class="thumb" aria-hidden="true"></span>
+      <button type="button" data-type="business" aria-pressed="true">Business</button>
+      <button type="button" data-type="shop" aria-pressed="false">Shop</button>
+      <button type="button" data-type="content" aria-pressed="false">Creator</button>
+    </div></div>
+    <div class="ctl"><span class="ctl-l">How do you want to pay?</span>
     <div class="seg pay" role="group" aria-label="How you pay">
       <span class="thumb" aria-hidden="true"></span>
       <button type="button" data-pay="monthly" aria-pressed="true">Monthly</button>
-      <button type="button" data-pay="once" aria-pressed="false">Pay once <small>1 year included</small></button>
-    </div>
-    <div class="seg type" role="group" aria-label="Type of site">
-      <span class="thumb" aria-hidden="true"></span>
-      <button type="button" data-type="content" aria-pressed="true">Content <small>creators &amp; personal</small></button>
-      <button type="button" data-type="business" aria-pressed="false">Business <small>services &amp; local</small></button>
-      <button type="button" data-type="shop" aria-pressed="false">Shop <small>sell online</small></button>
-    </div>
+      <button type="button" data-pay="once" aria-pressed="false">Pay once</button>
+    </div></div>
+    <div class="ctl cur-ctl"><span class="ctl-l">Currency</span>
     <div class="seg cur" role="group" aria-label="Currency">
       <span class="thumb" aria-hidden="true"></span>
-      <button type="button" data-cur="usd" aria-pressed="true" aria-label="US dollars">$</button>
-      <button type="button" data-cur="gbp" aria-pressed="false" aria-label="Pounds sterling">£</button>
-    </div>
+      <button type="button" data-cur="gbp" aria-pressed="true" aria-label="Pounds sterling">£</button>
+      <button type="button" data-cur="usd" aria-pressed="false" aria-label="US dollars">$</button>
+    </div></div>
   </div>
 
   <ul class="plans" id="plans" aria-live="polite"></ul>
@@ -713,22 +685,15 @@ footer{padding-top:64px}
   <div class="diy rise" id="ready-made" aria-labelledby="diy-h">
     <div class="diy-price">
       <span class="diy-tile" data-usd="15" aria-hidden="true"></span>
-      <p class="muted">One&#8209;off price per site. No monthly fees.</p>
+      <p class="muted">One&#8209;off price. No monthly fees.</p>
     </div>
     <div>
       <h3 id="diy-h">Just want the code?</h3>
-      <p class="lead muted">Grab one of my ready-made website designs as a single HTML file for <strong style="color:var(--ink)" data-usd="15"></strong>. Swap in your own name, text, photos and links, then host it wherever you like.</p>
-      <ul class="diy-list">
-        <li>One clean HTML file, ready to upload</li>
-        <li>Looks right on phones, tablets and laptops</li>
-        <li>Your text, photos and links swapped in easily</li>
-        <li>Works on free hosts like GitHub Pages or Netlify</li>
-      </ul>
+      <p class="lead muted">Get one of my ready-made website designs as a single HTML file for <strong style="color:var(--ink)" data-usd="15"></strong>. Swap in your own text, photos and links, then host it yourself.</p>
       <div class="diy-acts">
         <button class="btn btn-accent" type="button" id="diy-btn">Get a ready-made site</button>
-        <a class="wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20ready-made%20website%20HTML" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>or WhatsApp me</a>
       </div>
-      <p class="diy-note small muted">You set it up and edit it yourself, so upkeep isn't included. Want me to look after it? Pick a plan above instead.</p>
+      <p class="diy-note small muted">You set it up and edit it yourself, so upkeep isn't included.</p>
     </div>
   </div>
 
@@ -738,9 +703,9 @@ footer{padding-top:64px}
       <div class="body">
         <ul class="upkeep">
           <li>Small text and photo updates</li>
-          <li>New videos or products added</li>
+          <li>New products, prices or opening hours added</li>
           <li>Bug and broken-link fixes</li>
-          <li>Hosting help: kept online, fast and secure</li>
+          <li>Hosting: kept online, fast and secure</li>
         </ul>
         <div class="hours" aria-label="Change time per month">
           <div><b>1 hr</b><span class="muted small">a month on Starter</span></div>
@@ -750,50 +715,60 @@ footer{padding-top:64px}
       </div>
     </div>
     <div class="grid after-row rise">
-      <h3>Upkeep upgrades</h3>
-      <div class="body care">
-        <div><h4>Priority Care</h4><p class="cp" data-care="15,150"></p><p class="muted">Faster replies and double the change hours.</p></div>
-        <div><h4>Growth Care</h4><p class="cp" data-care="35,350"></p><p class="muted">Everything in Priority, a new page every quarter and a monthly visitor report.</p></div>
-      </div>
-    </div>
-    <div class="grid after-row rise">
-      <h3>Add-ons</h3>
-      <div class="body">
+      <h3>Extras</h3>
+      <div class="body faq">
+        <details class="extras"><summary>See add-ons and upkeep upgrades<i aria-hidden="true"></i></summary>
         <ul class="addons">
           <li><span>Extra page</span><b data-usd="25"></b></li>
           <li><span>Simple logo</span><b data-usd="40"></b></li>
           <li><span>Extra 10 products</span><b data-usd="20"></b></li>
-          <li><span>Copywriting</span><b data-usd="30" data-suffix="/page"></b></li>
+          <li><span>I write the text for you</span><b data-usd="30" data-suffix="/page"></b></li>
           <li><span>Extra revision</span><b data-usd="20"></b></li>
           <li><span>Rush delivery</span><b>+30% of build</b></li>
           <li><span>Move an existing site</span><b data-usd="60" data-prefix="from "></b></li>
+          <li><span>Priority Care: faster replies, double change hours</span><b data-care="15,150"></b></li>
+          <li><span>Growth Care: Priority, plus a new page every quarter and a monthly visitor report</span><b data-care="35,350"></b></li>
         </ul>
-        <p class="handover muted">Leaving upkeep? Take over your site files any time for a one-time <span data-usd="99"></span> handover fee.</p>
-      </div>
-    </div>
-    <div class="grid after-row rise">
-      <h3>Questions</h3>
-      <div class="body faq">
-        <details><summary>How does monthly work?<i aria-hidden="true"></i></summary><p class="ans">You pay a small setup fee to start, then the monthly price. There's a 12-month minimum, then it's month to month. Cancelling early means paying the remaining months.</p></details>
-        <details><summary>How does pay once work?<i aria-hidden="true"></i></summary><p class="ans">One payment covers the build and 12 months of upkeep. Starter is paid in full up front. Creator and Pro are 50% to start and 50% before launch. Custom is paid in milestones. After the first year, renew upkeep yearly or switch to monthly.</p></details>
-        <details><summary>When does the clock start?<i aria-hidden="true"></i></summary><p class="ans">Delivery times start once I have your text, photos and logo.</p></details>
-        <details><summary>What counts as a revision?<i aria-hidden="true"></i></summary><p class="ans">Revisions cover the design we agreed. New pages or features are add-ons.</p></details>
-        <details><summary>Can I upgrade later?<i aria-hidden="true"></i></summary><p class="ans">Yes, any time. You only pay the difference.</p></details>
-        <details><summary>Who owns the domain?<i aria-hidden="true"></i></summary><p class="ans">You do. Domains cost about <span data-range="10,20"></span> a year, you pay for it and it stays in your name. I set everything up.</p></details>
-        <details><summary>What if I stop upkeep?<i aria-hidden="true"></i></summary><p class="ans">Take over your site files for a one-time <span data-usd="99"></span> handover fee.</p></details>
-        <details><summary>Will I know the price first?<i aria-hidden="true"></i></summary><p class="ans">Always. You get a quote before any work starts.</p></details>
+        <p class="handover muted">Leaving upkeep? Take your site files any time for a one-time <span data-usd="99"></span> handover fee.</p>
+        </details>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec wrap about" id="about" aria-labelledby="about-h" style="padding-top:0">
-  <div class="grid">
-    <h2 class="h2 rise" id="about-h">Hey, I'm nshinji.</h2>
-    <div class="body rise" style="--d:90ms">
-      <p>I'm a <strong>content creator and web designer</strong>. On YouTube I post Roblox and Blox Fruits videos: funny moments, challenges, updates and Shorts, and I keep making each one better than the last.</p>
-      <p class="muted">I also <strong>build websites for creators, businesses and shops</strong>. Making videos taught me what keeps people watching: get to the point, look good on a phone, make the next step obvious. Every site I build works the same way, and I keep it updated for you after launch.</p>
-      <p><a class="link-arrow" href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">Visit nshinjimedia.co.uk <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+<section class="sec wrap" id="websites" aria-labelledby="work-h" style="padding-top:0">
+  <div class="work-head rise">
+    <h2 class="h2" id="work-h">Sites I've built</h2>
+    <p class="lead muted">Click to see them live.</p>
+  </div>
+  <ul class="projects">
+    <li class="rise"><a class="proj" href="https://sg0hann.online" target="_blank" rel="noopener">
+      <h3>sg0hann.online</h3>
+      <div class="meta"><b>Paying client · SG0HANN, Fortnite creator</b><span class="muted">His official hub for videos, maps and community.</span><span class="go">Visit site <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+    </a></li>
+    <li class="rise" style="--d:70ms"><a class="proj" href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">
+      <h3>nshinjimedia.co.uk</h3>
+      <div class="meta"><b>My own site · nshinji media</b><span class="muted">Home for my YouTube channel and socials.</span><span class="go">Visit site <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+    </a></li>
+    <li class="rise" style="--d:140ms"><a class="proj next" href="#contact">
+      <h3>Your business</h3>
+      <div class="meta"><b>Next up</b><span>Tell me about your business and I'll send a price within 24 hours.</span><span class="go">Get a free quote <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+    </a></li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+  <div class="grid after-row rise" style="border-top:1px solid var(--line)">
+    <h2 class="h2" id="faq-h">Questions</h2>
+    <div class="body faq">
+      <details><summary>Who are you?<i aria-hidden="true"></i></summary><p class="ans">I'm nshinji, a web designer and content creator from Porthcawl in South Wales. I build sites for small businesses and creators, and I keep looking after them once they're live.</p></details>
+      <details><summary>Will I know the price first?<i aria-hidden="true"></i></summary><p class="ans">Always. You get a fixed quote before any work starts.</p></details>
+      <details><summary>How does monthly work?<i aria-hidden="true"></i></summary><p class="ans">A small setup fee to start, then the monthly price. There's a 12-month minimum, then it's month to month. Cancelling early means paying the remaining months.</p></details>
+      <details><summary>How does pay once work?<i aria-hidden="true"></i></summary><p class="ans">One payment covers the build and 12 months of upkeep. Starter is paid up front. Creator and Pro are 50% to start and 50% before launch. After the first year, renew upkeep yearly or switch to monthly.</p></details>
+      <details><summary>Will people find me on Google?<i aria-hidden="true"></i></summary><p class="ans">Every site is set up with proper page titles, descriptions and a sitemap so Google can read it. Business plans from Creator up include basic SEO, and Pro includes help with your Google Business profile.</p></details>
+      <details><summary>Who owns the domain?<i aria-hidden="true"></i></summary><p class="ans">You do. Domains cost about <span data-range="10,20"></span> a year and stay in your name. I set everything up.</p></details>
+      <details><summary>When does the clock start?<i aria-hidden="true"></i></summary><p class="ans">Delivery times start once I have your text, photos and logo.</p></details>
+      <details><summary>Can I upgrade later?<i aria-hidden="true"></i></summary><p class="ans">Yes, any time. You only pay the difference.</p></details>
     </div>
   </div>
 </section>
@@ -801,46 +776,34 @@ footer{padding-top:64px}
 <section class="sec wrap contact" id="contact" aria-labelledby="contact-h">
   <div class="grid">
     <div class="c-left rise">
-      <h2 id="contact-h">Let's build something.</h2>
-      <p class="lead muted">Websites, collabs, sponsorships or anything else. Messages go straight to my inbox.</p>
-      <a class="email" href="mailto:nshinjicontact@protonmail.com"><span>nshinjicontact@</span><span>protonmail.com</span></a>
-      <p class="c-line muted">Email nshinjicontact@protonmail.com or WhatsApp +44 7865 606629</p>
+      <h2 id="contact-h">Get a free quote.</h2>
+      <p class="lead muted">Tell me about your business. I'll reply within 24 hours with a fixed price. No payment until you say yes.</p>
       <div class="c-acts">
         <a class="btn wa-btn" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a>
-        <a class="btn btn-quiet only-phone" href="tel:+447865606629">Call</a>
+        <a class="btn btn-quiet" href="tel:+447865606629">Call +44 7865 606629</a>
       </div>
-      <div class="c-soc"><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">Instagram</a></div>
+      <p class="c-line muted">Or email <a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></p>
     </div>
 
     <form id="form" novalidate aria-labelledby="contact-h">
       <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div class="f"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-err"><p class="err" id="name-err"></p></div>
+      <input type="hidden" name="_subject" value="Website quote request">
+      <div class="f"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required aria-describedby="name-err"><p class="err" id="name-err"></p></div>
       <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="err" id="email-err"></p></div>
-      <div class="f"><label for="reach">Best way to reach you after email</label>
-        <select id="reach" name="reach"><option value="">Choose a platform</option><option>WhatsApp</option><option>Discord</option><option>Instagram</option><option>TikTok</option><option>Snapchat</option><option>Telegram</option><option>Phone or text</option><option>Other</option></select></div>
-      <div class="f"><label for="handle">Username or number</label><input id="handle" name="handle" autocomplete="off"></div>
-      <div class="f"><label for="topic">What's it about?</label>
-        <select id="topic" name="about"><option>Website</option><option value="Ready-made HTML">Ready-made HTML ($15)</option><option>Collab</option><option>Sponsorship</option><option>Something else</option></select></div>
-      <div class="f"><label for="type">Type of site</label>
-        <select id="type" name="type"><option>Not sure</option><option value="Content">Content</option><option value="Business">Business</option><option value="Shop">Shop</option></select></div>
-      <div class="f"><label for="pack">Pack</label>
+      <div class="f"><label for="phone">Phone or WhatsApp <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="f"><label for="biz">Business name <span class="muted">(optional)</span></label><input id="biz" name="business" autocomplete="organization"></div>
+      <div class="f"><label for="type">What do you need?</label>
+        <select id="type" name="type"><option>Business website</option><option value="Online shop">Online shop</option><option value="Creator website">Creator website</option><option value="Ready-made HTML">Ready-made HTML file</option><option value="Not sure">Not sure yet</option></select></div>
+      <div class="f"><label for="pack">Plan</label>
         <select id="pack" name="pack"><option>Not sure</option><option>Starter</option><option>Creator</option><option>Pro</option><option>Custom</option></select></div>
-      <div class="f"><label for="pay">Payment</label>
-        <select id="pay" name="payment"><option>Not sure</option><option>Monthly</option><option>Pay once</option></select></div>
-      <div class="f full">
-        <div class="budget-out"><label for="budget">Budget</label><output id="budget-out" for="budget"></output></div>
-        <input id="budget" name="budget_step" type="range" min="0" max="4" step="1" value="2" aria-describedby="budget-hint">
-        <div class="ticks-row" aria-hidden="true"><span>Custom</span><span data-stop="1"></span><span data-stop="2"></span><span data-stop="3"></span><span data-stop="4"></span></div>
-        <p class="muted small" id="budget-hint">Working with a different budget? Set the slider to <span data-usd="0"></span> and tell me your number.</p>
-      </div>
-      <div class="f full" id="own-wrap" hidden><label for="own">Your budget</label><input id="own" name="own_budget" inputmode="decimal" placeholder="e.g. $250"></div>
-      <div class="f full"><label for="msg">Message</label><textarea id="msg" name="message" required aria-describedby="msg-err" placeholder="What are you building? Links to anything you like help."></textarea><p class="err" id="msg-err"></p></div>
-      <div class="submit-row"><button class="btn btn-accent" type="submit">Send message <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="muted small">Or <a href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener">WhatsApp me</a> if that's easier.</span></div>
+      <input type="hidden" id="pay" name="payment" value="">
+      <div class="f full"><label for="msg">Tell me about it</label><textarea id="msg" name="message" required aria-describedby="msg-err" placeholder="What does your business do? Do you have a website now? Anything you'd like on it?"></textarea><p class="err" id="msg-err"></p></div>
+      <div class="submit-row"><button class="btn btn-accent btn-big" type="submit">Send and get my quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="muted small">Free, and no obligation.</span></div>
     </form>
     <div class="done" id="done" hidden tabindex="-1">
-      <h3>Got it — I'll reply within 24 hours.</h3>
-      <p class="muted">Keep an eye on your inbox (and your spam folder, just in case). Want a faster answer? Message me on WhatsApp.</p>
-      <p style="margin-top:24px"><a class="btn wa-btn" style="background:#25d366;color:#04140a" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a></p>
+      <h3>Thanks, got it. I'll reply within 24 hours.</h3>
+      <p class="muted">Check your inbox (and spam, just in case). Want a faster answer? Message me on WhatsApp.</p>
+      <p style="margin-top:24px"><a class="btn wa-btn" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a></p>
     </div>
   </div>
 </section>
@@ -848,14 +811,14 @@ footer{padding-top:64px}
 
 <footer class="wrap" id="footer">
   <div class="f-cols">
-    <div><h4>Contact</h4><ul><li><a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></li><li><a href="tel:+447865606629">+44 7865 606629</a></li></ul>
+    <div><h4>Contact</h4><ul><li><a href="mailto:nshinjicontact@protonmail.com">nshinjicontact@protonmail.com</a></li><li><a href="tel:+447865606629">+44 7865 606629</a></li><li>Porthcawl, South Wales, UK</li></ul>
       <a class="f-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp me</a></div>
-    <div><h4>On this site</h4><ul><li><a href="#socials">Socials</a></li><li><a href="#websites">Websites</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li><a href="/thumbnails.html">Thumbnails</a></li></ul></div>
+    <div><h4>Websites</h4><ul><li><a href="#pricing">Prices</a></li><li><a href="#how">How it works</a></li><li><a href="#websites">Examples</a></li><li><a href="#contact">Get a quote</a></li></ul></div>
+    <div><h4>Also</h4><ul><li><a href="/thumbnails.html">Thumbnails</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="https://www.youtube.com/@nshinjiiii" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.tiktok.com/@nshinjii" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.instagram.com/nshinjiii" target="_blank" rel="noopener">Instagram</a></li></ul></div>
-    <div><h4>Work</h4><ul><li><a href="https://sg0hann.online" target="_blank" rel="noopener">sg0hann.online</a></li><li><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></li></ul></div>
   </div>
   <svg class="f-word" viewBox="0 0 1000 178" role="img" aria-label="nshinji"><text x="-6" y="168" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="226" letter-spacing="-9" textLength="1008" lengthAdjust="spacingAndGlyphs" fill="currentColor">NSHINJI</text></svg>
-  <div class="legal"><span>© nshinji · UK</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><button class="ck-link" type="button" data-ck-open>Cookie settings</button><a href="https://nshinjimedia.co.uk" target="_blank" rel="noopener">nshinjimedia.co.uk</a></div>
+  <div class="legal"><span>© nshinji · Web design, Porthcawl, UK</span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><button class="ck-link" type="button" data-ck-open>Cookie settings</button></div>
 </footer>
 
 <a class="float-wa" id="float-wa" href="https://wa.me/447865606629?text=Hi%20nshinji%2C%20I%27m%20interested%20in%20a%20website" target="_blank" rel="noopener" aria-label="Message nshinji on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
@@ -865,7 +828,6 @@ footer{padding-top:64px}
   <p>Pick what this site may save in your browser. You can change it any time from Cookie settings at the bottom of the page.</p>
   <ul>
     <li><b>Required:</b> remembers your cookie choice and your light or dark mode.</li>
-    <li><b>Optional:</b> the visitor counter, which counts your visit and shows how many people are here now.</li>
   </ul>
   <div class="ck-acts">
     <button class="ck-btn" type="button" data-ck="all">Accept all</button>
@@ -894,7 +856,6 @@ footer{padding-top:64px}
   bar.addEventListener('keydown',e=>{ if(e.key==='Escape' && choice){ hide(); } });
   document.addEventListener('click',e=>{ const o=e.target.closest('[data-ck-open]'); if(o){ e.preventDefault(); returnTo=o; show(true); } });
   window.nshinjiConsent={ get:()=>choice, set, on:f=>subs.push(f) };
-  if(!choice) show(false);
 })();
 </script>
 <script>
@@ -924,7 +885,7 @@ const PLANS = [
   shop:{from:2000,who:'For stores that have outgrown the basics.',items:['200+ products','Subscriptions and digital downloads','Wholesale pricing','Integrations','Store redesigns']}}
 ];
 
-const state = {pay:'monthly', type:'content', cur:'usd'};
+const state = {pay:'monthly', type:'business', cur:'gbp'};
 // optional link presets, e.g. ?pay=once&type=shop&cur=gbp
 const q = new URLSearchParams(location.search);
 [['pay',['monthly','once']],['type',['content','business','shop']],['cur',['usd','gbp']]].forEach(([k,ok])=>{
@@ -992,8 +953,6 @@ function render(){
   document.querySelectorAll('[data-usd]').forEach(el=>{el.textContent=(el.dataset.prefix||'')+money(+el.dataset.usd)+(el.dataset.suffix||'')});
   document.querySelectorAll('[data-care]').forEach(el=>{const [m,y]=el.dataset.care.split(',');el.textContent=`+${money(+m)}/mo or +${money(+y)}/yr`});
   document.querySelectorAll('[data-range]').forEach(el=>{const [a,b]=el.dataset.range.split(',');el.textContent=`${money(+a)}–${money(+b)}`});
-  updateBudget();
-  const ro=document.querySelector('#topic option[value="Ready-made HTML"]'); if(ro) ro.textContent=`Ready-made HTML (${money(15)})`;
   observeJump();
 }
 
@@ -1035,39 +994,22 @@ function observeJump(){
 // choose -> prefill form
 const form = document.getElementById('form');
 document.getElementById('diy-btn').addEventListener('click',()=>{
-  const t=document.getElementById('topic'); t.value='Ready-made HTML'; t.closest('.f').classList.add('filled');
+  const t=document.getElementById('type'); t.value='Ready-made HTML'; t.closest('.f').classList.add('filled');
   const m=document.getElementById('msg'); if(!m.value) m.value="Hi! I'd like a ready-made website HTML. It's for: ";
   (innerWidth<900?form:document.getElementById('contact')).scrollIntoView({behavior:RM?'auto':'smooth'});
   setTimeout(()=>document.getElementById('name').focus({preventScroll:true}), RM?0:650);
 });
-const stops = ()=>{const t=state.type;return [0,PLANS[0][t].once,PLANS[1][t].once,PLANS[2][t].once,PLANS[3][t].from]};
 plansEl.addEventListener('click',e=>{
   const b = e.target.closest('[data-choose]'); if(!b) return;
   const pack = b.dataset.choose;
   const set = (id,v)=>{const el=document.getElementById(id); el.value=v; el.closest('.f').classList.add('filled')};
-  set('topic','Website');
-  set('type', state.type[0].toUpperCase()+state.type.slice(1));
+  set('type', {business:'Business website',shop:'Online shop',content:'Creator website'}[state.type]);
   set('pack', pack);
-  set('pay', state.pay==='monthly'?'Monthly':'Pay once');
-  const idx = {Starter:1,Creator:2,Pro:3,Custom:4}[pack];
-  const r = document.getElementById('budget'); r.value = idx; updateBudget();
+  document.getElementById('pay').value = state.pay==='monthly'?'Monthly':'Pay once';
   (innerWidth<900?form:document.getElementById('contact')).scrollIntoView({behavior:RM?'auto':'smooth'});
   setTimeout(()=>document.getElementById('name').focus({preventScroll:true}), RM?0:650);
 });
 
-// budget slider
-const range = document.getElementById('budget'), out = document.getElementById('budget-out'), own = document.getElementById('own-wrap');
-const LABELS = ['Custom','Starter','Creator','Pro','Custom'];
-function updateBudget(){
-  const i = +range.value;
-  const S = stops();
-  document.querySelectorAll('[data-stop]').forEach(el=>{const k=+el.dataset.stop;el.textContent=money(S[k])+(k===4?'+':'')});
-  out.textContent = i===0 ? `${sym()}0 · tell me your number` : `${money(S[i])}${i===4?'+':''} · ${LABELS[i]}`;
-  range.style.setProperty('--fill', (i/4*100)+'%');
-  range.setAttribute('aria-valuetext', out.textContent);
-  own.hidden = i!==0;
-}
-range.addEventListener('input',updateBudget);
 form.querySelectorAll('select').forEach(s=>s.addEventListener('change',()=>s.closest('.f').classList.remove('filled')));
 
 // validation
@@ -1091,14 +1033,14 @@ form.addEventListener('submit',async e=>{
   if(ok.includes(false)){ document.getElementById(Object.keys(rules)[ok.indexOf(false)]).focus(); return; }
   if(form._gotcha.value) return;
   const fd = new FormData(form);
-  fd.set('budget', out.textContent); fd.set('currency', state.cur.toUpperCase());
+  fd.set('currency', state.cur.toUpperCase());
   const btn = form.querySelector('[type=submit]'); btn.disabled = true; btn.firstChild.textContent = 'Sending… ';
   try{
     if(FORM_ENDPOINT){
       const r = await fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{Accept:'application/json'}});
       if(!r.ok) throw new Error();
     } else {
-      const body = [...fd.entries()].filter(([k,v])=>v && k!=='_gotcha' && k!=='budget_step').map(([k,v])=>`${k}: ${v}`).join('\n');
+      const body = [...fd.entries()].filter(([k,v])=>v && k!=='_gotcha').map(([k,v])=>`${k}: ${v}`).join('\n');
       location.href = `mailto:nshinjicontact@protonmail.com?subject=${encodeURIComponent('Website enquiry from '+fd.get('name'))}&body=${encodeURIComponent(body)}`;
     }
     form.hidden = true; const d = document.getElementById('done'); d.hidden = false; d.focus();
@@ -1107,18 +1049,6 @@ form.addEventListener('submit',async e=>{
     document.getElementById('msg-err').textContent = "That didn't send. Try again, or email nshinjicontact@protonmail.com directly.";
   }
 });
-
-// bricks
-const bricks = document.querySelectorAll('.brick');
-bricks.forEach((b,i)=>{
-  b.addEventListener('click',()=>{
-    b.classList.toggle('lit');
-    if(!RM) b.animate([{transform:'none'},{transform:`translateY(-18%) rotate(${i%2?4:-4}deg)`,offset:.35},{transform:'translateY(3%)',offset:.75},{transform:'none'}],{duration:520,easing:'cubic-bezier(.2,.9,.25,1)'});
-  });
-});
-if(!RM){
-  bricks.forEach((b,i)=>b.animate([{transform:'translateY(-60vh)',opacity:0},{transform:'translateY(4%)',opacity:1,offset:.8},{transform:'none',opacity:1}],{duration:700,delay:250+i*80,easing:'cubic-bezier(.3,.7,.3,1)',fill:'backwards'}));
-}
 
 // entrances
 const io = new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} }),{rootMargin:'0px 0px -8% 0px'});
@@ -1163,113 +1093,6 @@ new MutationObserver(paintTheme).observe(rootEl,{attributes:true,attributeFilter
 paintTheme();
 })();
 </script>
-<script>
-(() => {
-  // ===== Follower counts: update these whenever they grow =====
-  // Last updated 26 Oct 2026
-  const STATS = { youtube: "74", tiktok: "5,129", instagram: "9" };
-  document.querySelectorAll('[data-count]').forEach(el => {
-    const v = STATS[el.dataset.count]; if (v) el.textContent = v;
-  });
 
-  // ===== Live visitors and total visits (free Abacus counter, no account needed) =====
-  const API = 'https://abacus.jasoncameron.dev', NS = 'nshinjiportfolio';
-  const nowEl = document.querySelector('[data-count="live"]');
-  const visitEl = document.querySelector('[data-count="visits"]');
-  const nowLabel = document.getElementById('now-label');
-  if (!nowEl || !visitEl) return;
-  // Only runs once the visitor picks "Accept all"
-  const C = window.nshinjiConsent;
-  let on = false, es = null, timer = null, check = () => {};
-  const offLabel = () => { nowEl.textContent = '–'; visitEl.textContent = '–'; if (nowLabel) nowLabel.textContent = 'counter off (cookie settings)'; };
-  const fmt = n => Number(n).toLocaleString('en-GB');
-  const bump = el => { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); };
-  const get = path => fetch(API + path).then(r => r.ok ? r.json() : { value: 0 }).then(j => j.value || 0).catch(() => null);
-  const setVisits = v => { if (!on || v == null) return; if (visitEl.textContent !== fmt(v)) { visitEl.textContent = fmt(v); bump(visitEl); } };
-
-  function start() {
-  if (on) return; on = true;
-  if (nowLabel) nowLabel.textContent = 'here right now';
-  // Total visits: count once per browser session, then follow new visits live
-  let counted = false;
-  try { counted = sessionStorage.getItem('nshinji-counted') === '1'; } catch (_) {}
-  (counted ? get('/get/' + NS + '/visits') : get('/hit/' + NS + '/visits')).then(v => {
-    setVisits(v);
-    if (!counted && v != null) { try { sessionStorage.setItem('nshinji-counted', '1'); } catch (_) {} }
-  });
-  if ('EventSource' in window) {
-    try {
-      es = new EventSource(API + '/stream/' + NS + '/visits');
-      es.onmessage = e => { if (on) try { setVisits(JSON.parse(e.data).value); } catch (_) {} };
-    } catch (_) {}
-  }
-
-  // People here now: each open tab checks in once a minute; count this minute's and last minute's check-ins
-  const minuteKey = off => {
-    const d = new Date(Date.now() - off * 60000), p = n => String(n).padStart(2, '0');
-    return 'now-' + d.getUTCFullYear() + p(d.getUTCMonth() + 1) + p(d.getUTCDate()) + p(d.getUTCHours()) + p(d.getUTCMinutes());
-  };
-  let lastCheckIn = '';
-  check = async () => {
-    if (!on || document.hidden) return;
-    const key = minuteKey(0);
-    let cur;
-    if (key !== lastCheckIn) { cur = await get('/hit/' + NS + '/' + key); lastCheckIn = key; }
-    else cur = await get('/get/' + NS + '/' + key);
-    const prev = await get('/get/' + NS + '/' + minuteKey(1));
-    if (!on || (cur == null && prev == null)) return;
-    const n = Math.max(1, cur || 0, prev || 0);
-    if (nowEl.textContent !== fmt(n)) { nowEl.textContent = fmt(n); bump(nowEl); }
-    if (nowLabel) nowLabel.textContent = n === 1 ? 'here right now (you)' : 'here right now';
-  };
-  tick();
-  timer = setInterval(tick, 15000);
-  }
-  function stop() {
-    on = false; if (es) { es.close(); es = null; } clearInterval(timer);
-    try { sessionStorage.removeItem('nshinji-counted'); } catch (_) {}
-    offLabel();
-  }
-  function tick() {
-    if (on) check();
-  }
-  document.addEventListener('visibilitychange', tick);
-  C.on(c => c === 'all' ? start() : stop());
-  C.get() === 'all' ? start() : offLabel();
-})();
-</script>
-<script>
-// scroll stage: brick turns with scroll, headline word swaps per third
-(()=>{
-  const stage=document.querySelector('.stage'), lego=document.getElementById('lego'), sw=document.getElementById('swap');
-  if(!stage||!lego) return;
-  const steps=[...document.querySelectorAll('.stage-steps li')], WORDS=['creators','businesses','shops'];
-  const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let cur=0, mx=0, my=0, raf=0, t0=performance.now();
-  function setWord(i){
-    if(i===cur) return; cur=i;
-    steps.forEach((s,k)=>s.classList.toggle('on',k===i));
-    if(RM){ sw.textContent=WORDS[i]; return; }
-    sw.classList.remove('in'); sw.classList.add('out');
-    setTimeout(()=>{ sw.textContent=WORDS[cur]; sw.classList.remove('out'); void sw.offsetWidth; sw.classList.add('in'); },200);
-  }
-  function frame(now){
-    raf=0;
-    const r=stage.getBoundingClientRect(), span=Math.max(1,stage.offsetHeight-innerHeight);
-    const p=Math.min(1,Math.max(0,-r.top/span));
-    const bob=RM?0:Math.sin((now-t0)/900)*8;
-    lego.style.setProperty('--ry',(-32+p*360+mx*14)+'deg');
-    lego.style.setProperty('--rx',(-22+Math.sin(p*Math.PI)*-14+my*-10)+'deg');
-    lego.style.setProperty('--y',bob+'px');
-    setWord(Math.min(2,Math.floor(p*3.0001)));
-    if(!RM && r.bottom>0 && r.top<innerHeight) raf=requestAnimationFrame(frame);
-  }
-  const kick=()=>{ if(!raf) raf=requestAnimationFrame(frame); };
-  addEventListener('scroll',kick,{passive:true});
-  addEventListener('resize',kick);
-  if(matchMedia('(hover:hover)').matches) addEventListener('pointermove',e=>{ mx=e.clientX/innerWidth-.5; my=e.clientY/innerHeight-.5; kick(); },{passive:true});
-  kick();
-})();
-</script>
 </body>
 </html>
