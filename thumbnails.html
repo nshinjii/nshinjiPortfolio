@@ -847,7 +847,6 @@ footer{padding-top:64px}
   <p>Pick what this site may save in your browser. You can change it any time from Cookie settings at the bottom of the page.</p>
   <ul>
     <li><b>Required:</b> remembers your cookie choice and your light or dark mode.</li>
-    <li><b>Optional:</b> the visitor counter, which counts your visit and shows how many people are here now.</li>
   </ul>
   <div class="ck-acts">
     <button class="ck-btn" type="button" data-ck="all">Accept all</button>
@@ -876,7 +875,6 @@ footer{padding-top:64px}
   bar.addEventListener('keydown',e=>{ if(e.key==='Escape' && choice){ hide(); } });
   document.addEventListener('click',e=>{ const o=e.target.closest('[data-ck-open]'); if(o){ e.preventDefault(); returnTo=o; show(true); } });
   window.nshinjiConsent={ get:()=>choice, set, on:f=>subs.push(f) };
-  if(!choice) show(false);
 })();
 </script>
 <script>
